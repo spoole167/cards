@@ -37,9 +37,9 @@ OAuth 2.1 (RFC 9700) mandates PKCE for all clients, public and confidential alik
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // application.yml — no changes needed on client side
-@@removed
 spring:
   security:
     oauth2:
@@ -50,7 +50,10 @@ spring:
             client-id: my-confidential-client
             client-secret: ${CLIENT_SECRET}
             scope: openid,profile
-@@added
+```
+
+#### Added
+```diff-card
 # Client config stays the same — Spring Security 7 adds PKCE automatically.
 # But your authorization server MUST accept PKCE parameters.
 spring:
@@ -65,23 +68,29 @@ spring:
             scope: openid,profile
 ```
 
+#### Removed
 ```diff-card
 # // Keycloak realm config — enable PKCE for confidential client
-@@removed
 "clientId": "my-confidential-client",
 "publicClient": false,
 "pkceCodeChallengeMethod": ""
-@@added
+```
+
+#### Added
+```diff-card
 "clientId": "my-confidential-client",
 "publicClient": false,
 "pkceCodeChallengeMethod": "S256"
 ```
 
+#### Removed
 ```diff-card
 # // Disable PKCE enforcement if auth server can't support it (temporary)
-@@removed
 // default PKCE behaviour
-@@added
+```
+
+#### Added
+```diff-card
 @Bean
 public OAuth2AuthorizationRequestResolver pkceResolver(
         ClientRegistrationRepository repo) {

@@ -35,16 +35,19 @@ $ mvn compile
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Async method return type
-@@removed
 import org.springframework.util.concurrent.ListenableFuture;
 
 @Async
 public ListenableFuture<String> fetchData() {
     return AsyncResult.forValue(doWork());
 }
-@@added
+```
+
+#### Added
+```diff-card
 import java.util.concurrent.CompletableFuture;
 
 @Async
@@ -53,15 +56,18 @@ public CompletableFuture<String> fetchData() {
 }
 ```
 
+#### Removed
 ```diff-card
 # // Callback-based usage
-@@removed
 ListenableFuture<String> future = asyncService.fetchData();
 future.addCallback(
     result -> log.info("Success: {}", result),
     ex -> log.error("Failed", ex)
 );
-@@added
+```
+
+#### Added
+```diff-card
 CompletableFuture<String> future = asyncService.fetchData();
 future.whenComplete((result, ex) -> {
     if (ex != null) log.error("Failed", ex);

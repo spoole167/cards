@@ -29,11 +29,14 @@ Spring Boot 4.0 extracted persistence-related auto-configuration into a dedicate
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Import
-@@removed
 import org.springframework.boot.autoconfigure.domain.EntityScan;
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.boot.persistence.autoconfigure.EntityScan;
 ```
 

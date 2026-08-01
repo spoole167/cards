@@ -31,9 +31,9 @@ JPMS forbids multiple JARs contributing to the same package (split packages). In
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // pom.xml — BOM: group ID stays org.testcontainers; remove explicit version if using Boot parent
-@@removed
 <dependency>
     <groupId>org.testcontainers</groupId>
     <artifactId>testcontainers-bom</artifactId>
@@ -41,25 +41,34 @@ JPMS forbids multiple JARs contributing to the same package (split packages). In
     <type>pom</type>
     <scope>import</scope>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <!-- Managed by Spring Boot 4.0 parent POM — remove explicit BOM if using starter-parent -->
 ```
 
+#### Removed
 ```diff-card
 # // Java imports — specialised containers move to module sub-packages
-@@removed
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.containers.KafkaContainer;
-@@added
+```
+
+#### Added
+```diff-card
 import org.testcontainers.postgresql.PostgreSQLContainer;
 import org.testcontainers.kafka.KafkaContainer;
 ```
 
+#### Removed
 ```diff-card
 # // GenericContainer stays put — no change needed
-@@removed
 import org.testcontainers.containers.GenericContainer;
-@@added
+```
+
+#### Added
+```diff-card
 import org.testcontainers.containers.GenericContainer;  // unchanged
 ```
 

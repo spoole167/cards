@@ -36,20 +36,26 @@ The rename aligns sequence names with the tables they serve, making the schema s
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // SQL migration script — PostgreSQL
-@@removed
 -- Old sequences from Spring Batch 5
-@@added
+```
+
+#### Added
+```diff-card
 -- Rename sequences to match Spring Batch 6 expectations
 ALTER SEQUENCE BATCH_JOB_SEQ RENAME TO BATCH_JOB_INSTANCE_SEQ;
 ```
 
+#### Removed
 ```diff-card
 # // SQL migration script — MySQL
-@@removed
 -- Old sequences from Spring Batch 5
-@@added
+```
+
+#### Added
+```diff-card
 -- MySQL uses tables for sequence emulation
 RENAME TABLE BATCH_JOB_SEQ TO BATCH_JOB_INSTANCE_SEQ;
 ```

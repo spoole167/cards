@@ -33,26 +33,32 @@ Jackson's maintainers separated the project identity from the original FasterXML
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // pom.xml — explicit Jackson dependency
-@@removed
 <dependency>
     <groupId>com.fasterxml.jackson.core</groupId>
     <artifactId>jackson-databind</artifactId>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <dependency>
     <groupId>tools.jackson.core</groupId>
     <artifactId>jackson-databind</artifactId>
 </dependency>
 ```
 
+#### Removed
 ```diff-card
 # // Java imports — ObjectMapper and core types
-@@removed
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
-@@added
+```
+
+#### Added
+```diff-card
 import tools.jackson.databind.ObjectMapper;
 import tools.jackson.core.JacksonException;
 ```

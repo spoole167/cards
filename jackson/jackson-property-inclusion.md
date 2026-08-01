@@ -39,19 +39,25 @@ Jackson 3 moved inclusion configuration from a single global enum to a granular 
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // application.properties — old (silently ignored)
-@@removed
 spring.jackson.default-property-inclusion=non_null
-@@added
+```
+
+#### Added
+```diff-card
 # Removed — configure via ObjectMapper bean instead
 ```
 
+#### Removed
 ```diff-card
 # // ObjectMapper customiser bean
-@@removed
 # (relied on spring.jackson.default-property-inclusion)
-@@added
+```
+
+#### Added
+```diff-card
 @Bean
 public Jackson2ObjectMapperBuilderCustomizer nonNullInclusion() {
     return builder -> builder
@@ -59,11 +65,14 @@ public Jackson2ObjectMapperBuilderCustomizer nonNullInclusion() {
 }
 ```
 
+#### Removed
 ```diff-card
 # // Or per-class annotation
-@@removed
 public class UserDto {
-@@added
+```
+
+#### Added
+```diff-card
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserDto {
 ```

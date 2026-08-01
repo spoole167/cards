@@ -29,11 +29,14 @@ EnvironmentPostProcessor is used across many contexts, so it moved to the root p
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // EnvironmentPostProcessor import
-@@removed
 import org.springframework.boot.env.EnvironmentPostProcessor;
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.boot.EnvironmentPostProcessor;
 ```
 

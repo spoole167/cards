@@ -31,9 +31,9 @@ The method was always experimental. Hibernate 7.0 completed the Jakarta Data int
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Programmatic order via removed setOrder()
-@@removed
 SelectionQuery<Product> query =
     session.createSelectionQuery("from Product", Product.class);
 query.setOrder(List.of(Order.asc(Product.class, "name")));
@@ -41,7 +41,10 @@ query.setOrder(List.of(Order.asc(Product.class, "name")));
 
 ```diff-card
 # // Fix: inline ORDER BY in HQL
-@@added
+```
+
+#### Added
+```diff-card
 SelectionQuery<Product> query =
     session.createSelectionQuery("from Product order by name asc", Product.class);
 ```

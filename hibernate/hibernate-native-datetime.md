@@ -43,32 +43,41 @@ The <code>java.sql</code> date/time classes are legacy wrappers around <code>jav
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Fix native query result handling
-@@removed
 java.sql.Date date = (java.sql.Date) row[2];
 long millis = date.getTime();
-@@added
+```
+
+#### Added
+```diff-card
 LocalDate date = (LocalDate) row[2];
 long millis = date.atStartOfDay(ZoneOffset.UTC)
                   .toInstant().toEpochMilli();
 ```
 
+#### Removed
 ```diff-card
 # // Typed native query
-@@removed
 @Query(value = "SELECT created_date FROM orders", nativeQuery = true)
 List<java.sql.Date> findAllDates();
-@@added
+```
+
+#### Added
+```diff-card
 @Query(value = "SELECT created_date FROM orders", nativeQuery = true)
 List<java.time.LocalDate> findAllDates();
 ```
 
+#### Removed
 ```diff-card
 # // Timestamp results
-@@removed
 java.sql.Timestamp ts = (java.sql.Timestamp) row[3];
-@@added
+```
+
+#### Added
+```diff-card
 LocalDateTime ts = (LocalDateTime) row[3];
 ```
 

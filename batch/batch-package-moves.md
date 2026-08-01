@@ -31,14 +31,17 @@ Spring Batch 6.0 redesigned the domain model to give each concern its own subpac
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Core domain imports
-@@removed
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobInstance;
 import org.springframework.batch.core.JobParameters;
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.batch.core.job.Job;
 import org.springframework.batch.core.job.JobExecution;
 import org.springframework.batch.core.job.JobInstance;

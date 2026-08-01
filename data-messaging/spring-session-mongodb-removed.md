@@ -32,15 +32,18 @@ Boot 4.0 handed several Spring Session store integrations to the teams closest t
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // pom.xml — switch to Spring Data MongoDB's own session support
-@@removed
 <!-- Boot 3.5: built-in auto-config via spring-session-data-mongodb -->
 <dependency>
     <groupId>org.springframework.session</groupId>
     <artifactId>spring-session-data-mongodb</artifactId>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <!-- Boot 4.0: session support is part of spring-boot-starter-data-mongodb -->
 <dependency>
     <groupId>org.springframework.boot</groupId>

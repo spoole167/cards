@@ -33,9 +33,9 @@ UTF-8 is the universal standard for text encoding. Platform-default encoding pro
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // logback-spring.xml — if you need to override the default
-@@removed
 <!-- Boot 3.5: no charset specified, platform default used for file appender -->
 <appender name="FILE" class="ch.qos.logback.core.FileAppender">
     <file>app.log</file>
@@ -43,7 +43,10 @@ UTF-8 is the universal standard for text encoding. Platform-default encoding pro
         <pattern>%d{yyyy-MM-dd} %-5level %msg%n</pattern>
     </encoder>
 </appender>
-@@added
+```
+
+#### Added
+```diff-card
 <!-- Boot 4.0: UTF-8 is default; specify charset explicitly if you need platform encoding -->
 <appender name="FILE" class="ch.qos.logback.core.FileAppender">
     <file>app.log</file>

@@ -39,15 +39,18 @@ Embedded Tomcat and external container are distinct deployment models with diffe
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // pom.xml — WAR deployment dependency update
-@@removed
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-tomcat</artifactId>
     <scope>provided</scope>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-tomcat-runtime</artifactId>

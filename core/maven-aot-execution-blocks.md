@@ -37,14 +37,17 @@ AOT processing runs by default in Boot 4.0, even for non-native builds, so the b
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // pom.xml — remove explicit AOT execution if using parent POM
-@@removed
 <execution>
     <id>process-aot</id>
     <goals><goal>process-aot</goal></goals>
 </execution>
-@@added
+```
+
+#### Added
+```diff-card
 <!-- AOT goals are now bound automatically by the parent POM -->
 ```
 

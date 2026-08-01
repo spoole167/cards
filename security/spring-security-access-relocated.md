@@ -31,19 +31,25 @@ Spring Security 7.0 makes <code>AuthorizationManager</code> the sole supported a
 
 ```diff-card
 # // pom.xml — add legacy module if needed
-@@added
+```
+
+#### Added
+```diff-card
 <dependency>
     <groupId>org.springframework.security</groupId>
     <artifactId>spring-security-access</artifactId>
 </dependency>
 ```
 
+#### Removed
 ```diff-card
 # // Preferred: migrate to AuthorizationManager
-@@removed
 import org.springframework.security.access.AccessDecisionManager;
 // implements AccessDecisionManager
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.security.authorization.AuthorizationManager;
 // implements AuthorizationManager<RequestAuthorizationContext>
 ```

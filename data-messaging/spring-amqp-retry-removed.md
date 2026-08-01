@@ -34,9 +34,9 @@ Spring Boot 4.0 dropped Spring Retry across the board in favour of Spring Framew
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Publisher-side retry customizer
-@@removed
 import org.springframework.amqp.rabbit.retry.RabbitRetryTemplateCustomizer;
 
 @Bean
@@ -45,7 +45,10 @@ public RabbitRetryTemplateCustomizer retryCustomizer() {
         retryTemplate.setRetryPolicy(...);
     };
 }
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.boot.autoconfigure.amqp.RabbitTemplateRetrySettingsCustomizer;
 
 @Bean
@@ -56,11 +59,14 @@ public RabbitTemplateRetrySettingsCustomizer retryCustomizer() {
 }
 ```
 
+#### Removed
 ```diff-card
 # // Consumer-side retry customizer
-@@removed
 // Previously both publisher and consumer shared RabbitRetryTemplateCustomizer
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.boot.autoconfigure.amqp.RabbitListenerRetrySettingsCustomizer;
 
 @Bean

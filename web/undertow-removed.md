@@ -31,9 +31,9 @@ Undertow's development slowed and its Jakarta EE 11 support lagged behind Tomcat
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // pom.xml — remove Undertow starter
-@@removed
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-web</artifactId>
@@ -48,7 +48,10 @@ Undertow's development slowed and its Jakarta EE 11 support lagged behind Tomcat
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-undertow</artifactId>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-web</artifactId>
@@ -57,15 +60,18 @@ Undertow's development slowed and its Jakarta EE 11 support lagged behind Tomcat
      and exclude spring-boot-starter-tomcat -->
 ```
 
+#### Removed
 ```diff-card
 # // application.yml — Undertow-specific config
-@@removed
 server:
   undertow:
     io-threads: 8
     worker-threads: 64
     buffer-size: 1024
-@@added
+```
+
+#### Added
+```diff-card
 server:
   tomcat:
     threads:

@@ -29,19 +29,25 @@ Spring Boot 4.0 groups its infrastructure by concern: bootstrap lifecycle classe
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // BootstrapRegistry import
-@@removed
 import org.springframework.boot.BootstrapRegistry;
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.boot.bootstrap.BootstrapRegistry;
 ```
 
+#### Removed
 ```diff-card
 # // ConfigurableBootstrapContext import
-@@removed
 import org.springframework.boot.ConfigurableBootstrapContext;
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.boot.bootstrap.ConfigurableBootstrapContext;
 ```
 

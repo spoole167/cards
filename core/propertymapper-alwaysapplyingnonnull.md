@@ -31,11 +31,14 @@ The non-null default was the right behaviour for virtually all use cases. Requir
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Remove the method call — the behaviour is now default
-@@removed
 PropertyMapper map = PropertyMapper.get().alwaysApplyingWhenNonNull();
-@@added
+```
+
+#### Added
+```diff-card
 PropertyMapper map = PropertyMapper.get();
 ```
 

@@ -32,34 +32,46 @@ Treating HTTP headers as a generic map encouraged misuse and blocked performance
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Replace Map method calls with HttpHeaders equivalents
-@@removed
 headers.containsKey("Content-Type")
-@@added
+```
+
+#### Added
+```diff-card
 headers.containsHeader("Content-Type")
 ```
 
+#### Removed
 ```diff-card
-@@removed
 Set<String> names = headers.keySet();
-@@added
+```
+
+#### Added
+```diff-card
 Set<String> names = headers.headerNames();
 ```
 
+#### Removed
 ```diff-card
-@@removed
 Set<Map.Entry<String, List<String>>> entries = headers.entrySet();
-@@added
+```
+
+#### Added
+```diff-card
 Set<Map.Entry<String, List<String>>> entries = headers.headerSet();
 ```
 
+#### Removed
 ```diff-card
 # // Passing HttpHeaders where MultiValueMap is expected
-@@removed
 void process(MultiValueMap<String, String> map) { ... }
 process(headers);
-@@added
+```
+
+#### Added
+```diff-card
 void process(HttpHeaders headers) { ... }
 // or, if the method signature can't change:
 process(headers.toMultiValueMap());

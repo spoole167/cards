@@ -36,14 +36,17 @@ Many Batch use cases (short-lived jobs, unit tests, development) do not need dat
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // pom.xml — add the JDBC starter to restore database persistence
-@@removed
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-batch</artifactId>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-batch</artifactId>

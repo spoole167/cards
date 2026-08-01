@@ -35,9 +35,9 @@ The "Json" prefix was misleading: Jackson handles YAML, XML, CBOR, and other for
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Custom serializer class
-@@removed
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;
 
@@ -45,7 +45,10 @@ public class DateSerializer extends JsonSerializer<LocalDate> {
     @Override
     public void serialize(LocalDate value, JsonGenerator gen,
             SerializerProvider provider) throws IOException {
-@@added
+```
+
+#### Added
+```diff-card
 import tools.jackson.databind.ser.ValueSerializer;
 import tools.jackson.databind.SerializationContext;
 
@@ -55,23 +58,29 @@ public class DateSerializer extends ValueSerializer<LocalDate> {
             SerializationContext ctxt) throws IOException {
 ```
 
+#### Removed
 ```diff-card
 # // Custom deserializer class
-@@removed
 import com.fasterxml.jackson.databind.JsonDeserializer;
 
 public class DateDeserializer extends JsonDeserializer<LocalDate> {
-@@added
+```
+
+#### Added
+```diff-card
 import tools.jackson.databind.deser.ValueDeserializer;
 
 public class DateDeserializer extends ValueDeserializer<LocalDate> {
 ```
 
+#### Removed
 ```diff-card
 # // Exception handling
-@@removed
 import com.fasterxml.jackson.databind.JsonMappingException;
-@@added
+```
+
+#### Added
+```diff-card
 import tools.jackson.databind.DatabindException;
 ```
 

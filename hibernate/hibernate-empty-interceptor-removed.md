@@ -31,9 +31,9 @@ When Hibernate 6.0 added default methods to <code>Interceptor</code>, <code>Empt
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Before — extending EmptyInterceptor
-@@removed
 import org.hibernate.EmptyInterceptor;
 
 public class MyInterceptor extends EmptyInterceptor {
@@ -48,7 +48,10 @@ public class MyInterceptor extends EmptyInterceptor {
 
 ```diff-card
 # // After — implementing Interceptor directly
-@@added
+```
+
+#### Added
+```diff-card
 import org.hibernate.Interceptor;
 
 public class MyInterceptor implements Interceptor {

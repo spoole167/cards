@@ -30,11 +30,14 @@ $ mvn compile
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // JobStep launcher → operator
-@@removed
 jobStep.setJobLauncher(jobLauncher);
-@@added
+```
+
+#### Added
+```diff-card
 jobStep.setJobOperator(jobOperator);
 ```
 

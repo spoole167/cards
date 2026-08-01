@@ -34,9 +34,9 @@ Java 8 default methods made the support classes unnecessary: the interfaces prov
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Job listener
-@@removed
 import org.springframework.batch.core.listener.JobExecutionListenerSupport;
 
 public class JobCompletionListener extends JobExecutionListenerSupport {
@@ -45,7 +45,10 @@ public class JobCompletionListener extends JobExecutionListenerSupport {
         log.info("Job completed: {}", jobExecution.getStatus());
     }
 }
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.batch.core.JobExecutionListener;
 
 public class JobCompletionListener implements JobExecutionListener {
@@ -56,13 +59,16 @@ public class JobCompletionListener implements JobExecutionListener {
 }
 ```
 
+#### Removed
 ```diff-card
 # // Step listener
-@@removed
 import org.springframework.batch.core.listener.StepExecutionListenerSupport;
 
 public class StepLogger extends StepExecutionListenerSupport {
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.batch.core.StepExecutionListener;
 
 public class StepLogger implements StepExecutionListener {

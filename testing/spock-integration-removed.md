@@ -42,9 +42,9 @@ The Groovy 5 upgrade aligned Boot with the current Groovy ecosystem. Spock's Gro
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Spock specification → JUnit 5 migration
-@@removed
 // MyServiceSpec.groovy
 @SpringBootTest
 class MyServiceSpec extends Specification {
@@ -54,7 +54,10 @@ class MyServiceSpec extends Specification {
         expect: service.doThing() == "result"
     }
 }
-@@added
+```
+
+#### Added
+```diff-card
 // MyServiceTest.java
 @SpringBootTest
 class MyServiceTest {

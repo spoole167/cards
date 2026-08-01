@@ -29,11 +29,14 @@ Spring Boot 4.0 consolidated test-context infrastructure into a more coherent pa
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Import on custom test annotation
-@@removed
 import org.springframework.boot.test.autoconfigure.properties.PropertyMapping;
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.boot.test.context.PropertyMapping;
 ```
 

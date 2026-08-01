@@ -39,39 +39,48 @@ The Jakarta EE transition moved all <code>javax.*</code> APIs to <code>jakarta.*
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Java imports
-@@removed
 import javax.inject.Inject;
 import javax.inject.Named;
-@@added
+```
+
+#### Added
+```diff-card
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
 ```
 
+#### Removed
 ```diff-card
 # // pom.xml — if you had an explicit dependency
-@@removed
 <dependency>
     <groupId>javax.inject</groupId>
     <artifactId>javax.inject</artifactId>
     <version>1</version>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <dependency>
     <groupId>jakarta.inject</groupId>
     <artifactId>jakarta.inject-api</artifactId>
 </dependency>
 ```
 
+#### Removed
 ```diff-card
 # // Or just use Spring annotations
-@@removed
 @Named("orderService")
 public class OrderService {
     @Inject
     private OrderRepository repo;
-@@added
+```
+
+#### Added
+```diff-card
 @Service("orderService")
 public class OrderService {
     @Autowired
