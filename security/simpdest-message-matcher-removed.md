@@ -30,9 +30,9 @@ The old configurer and matcher classes were deprecated in Security 6.x. 7.0 remo
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Old — matcher-based WebSocket security config
-@@removed
 import org.springframework.security.messaging.util.matcher.SimpDestinationMessageMatcher;
 // ...
 new SimpDestinationMessageMatcher("/topic/**");

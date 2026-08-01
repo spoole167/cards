@@ -34,9 +34,9 @@ Java 8 interface default methods eliminate the need for adapter-style base class
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Replace base class with direct interface implementation
-@@removed
 public class MyJobListener extends JobExecutionListenerSupport {
     @Override
     public void afterJob(JobExecution jobExecution) {

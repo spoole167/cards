@@ -38,9 +38,9 @@ The lambda DSL is more readable and avoids a class of configuration bugs where <
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Security filter chain — before
-@@removed
 http
     .authorizeRequests()
         .antMatchers("/public/**").permitAll()
@@ -67,9 +67,9 @@ http
     );
 ```
 
+#### Removed
 ```diff-card
 # // CSRF configuration
-@@removed
 http.csrf().disable();
 @@added
 http.csrf(csrf -> csrf.disable());

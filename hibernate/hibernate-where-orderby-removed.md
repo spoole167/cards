@@ -35,9 +35,9 @@ The new annotation names make it explicit that the argument is a raw SQL fragmen
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Entity annotations
-@@removed
 import org.hibernate.annotations.Where;
 import org.hibernate.annotations.OrderBy;
 

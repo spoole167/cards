@@ -37,9 +37,9 @@ The original hierarchy was a design mistake: it forced checked-exception handlin
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Controller error handling — before
-@@removed
 try {
     Order order = objectMapper.readValue(body, Order.class);
 } catch (IOException e) {
@@ -53,9 +53,9 @@ try {
 }
 ```
 
+#### Removed
 ```diff-card
 # // Spring @ExceptionHandler — before
-@@removed
 @ExceptionHandler(IOException.class)
 public ResponseEntity<String> handleJsonError(IOException ex) {
 @@added
@@ -63,9 +63,9 @@ public ResponseEntity<String> handleJsonError(IOException ex) {
 public ResponseEntity<String> handleJsonError(JacksonException ex) {
 ```
 
+#### Removed
 ```diff-card
 # // Method signature cleanup
-@@removed
 public Order parseOrder(String json) throws IOException {
 @@added
 public Order parseOrder(String json) {

@@ -30,9 +30,9 @@ ApacheDS development had stalled and its Jakarta EE compatibility lagged. Unboun
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // pom.xml — swap the embedded LDAP dependency
-@@removed
 <dependency>
     <groupId>org.apache.directory.server</groupId>
     <artifactId>apacheds-server-jndi</artifactId>
@@ -46,9 +46,9 @@ ApacheDS development had stalled and its Jakarta EE compatibility lagged. Unboun
 </dependency>
 ```
 
+#### Removed
 ```diff-card
 # // Java config — replace the container class
-@@removed
 import org.springframework.security.ldap.server.ApacheDSContainer;
 // ...
 new ApacheDSContainer("dc=springframework,dc=org", "classpath:users.ldif");

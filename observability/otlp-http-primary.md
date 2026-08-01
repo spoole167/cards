@@ -41,9 +41,9 @@ HTTP/protobuf is more universally supported, works through proxies and load bala
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // application.properties — keep using gRPC
-@@removed
 # default was gRPC on port 4317
 @@added
 management.otlp.tracing.transport=grpc
@@ -52,17 +52,17 @@ management.otlp.metrics.export.transport=grpc
 management.otlp.metrics.export.endpoint=http://otel-collector:4317
 ```
 
+#### Removed
 ```diff-card
 # // application.properties — accept new HTTP default
-@@removed
 management.otlp.tracing.endpoint=http://otel-collector:4317
 @@added
 management.otlp.tracing.endpoint=http://otel-collector:4318/v1/traces
 ```
 
+#### Removed
 ```diff-card
 # // docker-compose.yml — expose HTTP port on collector
-@@removed
 otel-collector:
   image: otel/opentelemetry-collector:latest
   ports:

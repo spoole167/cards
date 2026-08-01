@@ -35,9 +35,9 @@ Jackson 3 rebranded from the <code>com.fasterxml.jackson</code> group ID to <cod
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Custom serializer
-@@removed
 import org.springframework.boot.jackson.JsonComponent;
 
 @JsonComponent
@@ -49,9 +49,9 @@ import org.springframework.boot.jackson.JacksonComponent;
 public class MoneySerializer extends JsonSerializer<Money> { ... }
 ```
 
+#### Removed
 ```diff-card
 # // Mixin
-@@removed
 import org.springframework.boot.jackson.JsonMixin;
 
 @JsonMixin(Money.class)

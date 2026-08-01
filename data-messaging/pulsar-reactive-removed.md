@@ -34,9 +34,9 @@ Boot 4.0's modular restructuring dropped auto-configurations for reactive integr
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Replace reactive auto-config with explicit bean definitions
-@@removed
 <!-- Boot 3.5: auto-configured reactive Pulsar client -->
 <dependency>
     <groupId>org.springframework.boot</groupId>

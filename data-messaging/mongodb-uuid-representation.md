@@ -37,9 +37,9 @@ Boot's defaults overrode the MongoDB driver defaults, surprising teams using Mon
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // application.properties — restore Boot 3.5 representations
-@@removed
 # Boot 3.5: these were set automatically (no configuration needed)
 @@added
 # Boot 4.0: must be explicit to match what Boot 3.5 used
