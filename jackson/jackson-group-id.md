@@ -86,9 +86,16 @@ Search your codebase for <code>com.fasterxml.jackson</code>. Every hit is a coor
 
 Driven by Jackson 3.0, upstream of Spring Boot 4.0. The FasterXML to tools.jackson rename was announced in 2023 and finalised in Jackson 3.0-rc1. See also: jackson-class-renames, jackson-exception-hierarchy.
 
+#### From the field.
+
+Every production migration writeup so far names Jackson 3 as the single biggest risk in the whole 4.0 upgrade. The import change is the easy half; the behaviour shifts covered in the sibling cards are where the time goes. Teams that budgeted a day for "update the imports" report spending weeks on serialisation diffs.
+
 ## Links {.footer-links}
 
 - [spring-break module: jackson-group-id](https://github.com/spoole167/spring-break/tree/main/jackson-group-id)
 
 - [Jackson 3 migration guide](https://github.com/FasterXML/jackson/blob/main/jackson3/MIGRATING_TO_JACKSON_3.md)
 
+- [Spring Boot 4.0 migration guide for production teams (DEV)](https://dev.to/aytronn/spring-boot-40-migration-guide-for-production-teams-what-actually-breaks-and-how-to-upgrade-safely-22me)
+
+- [Spring Boot 4 migration: what actually broke (Java Code Geeks)](https://www.javacodegeeks.com/2026/05/spring-boot-4-migration-breaking-changes-new-defaultsand-what-actually-broke.html)

@@ -98,9 +98,14 @@ Search for <code>session.delete(</code>, <code>session.save(</code>, <code>sessi
 
 Driven by Hibernate 7.0, upstream of Spring Boot 4.0. The methods were deprecated in Hibernate 6.0. See also: cascade-save-update, hibernate-dialect-removal.
 
+#### From the field.
+
+Field guides agree on the sequencing: burn down every Hibernate deprecation warning while still on 6.6 and version 7 becomes close to a version bump. Teams that skip that step meet all the removals at once, and the replacements are not drop-in: <code>persist()</code> and <code>merge()</code> behave differently around detached entities than <code>save()</code> and <code>update()</code> did.
+
 ## Links {.footer-links}
 
 - [spring-break module: hibernate-session-delete](https://github.com/spoole167/spring-break/tree/main/hibernate-session-delete)
 
 - [Hibernate 7 migration guide](https://docs.jboss.org/hibernate/orm/7.0/migration-guide/migration-guide.html)
 
+- [Hibernate 5 to 6 to 7 migration guide (ankurm.com)](https://ankurm.com/hibernate-5-to-6-to-7-migration-guide/)

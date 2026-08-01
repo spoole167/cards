@@ -105,6 +105,10 @@ All API endpoints respond (especially wildcard/regex patterns)
 
 PathPatternParser has been WebFlux's default since Spring 5.0; Boot 4.0 brings MVC and Security into line. See also: security-dsl-rewrite, auth-default-deny.
 
+#### From the field.
+
+Field writeups flag this as the sneaky one: everything compiles, the app starts, and authorisation or routing rules quietly match differently. Silent matching changes are called out as the part of the Security/Framework upgrade that survives code review and surfaces in production.
+
 ## Links {.footer-links}
 
 - [Spring-Break Demo](https://github.com/spoole167/spring-break/tree/main/path-matching-engine)
@@ -113,3 +117,4 @@ PathPatternParser has been WebFlux's default since Spring 5.0; Boot 4.0 brings M
 
 - [Spring Boot 4.0 Migration Guide](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-4.0-Migration-Guide)
 
+- [Spring Security 5 to 6 to 7 migration guide (ankurm.com)](https://ankurm.com/spring-security-5-to-6-to-7-migration-guide/)

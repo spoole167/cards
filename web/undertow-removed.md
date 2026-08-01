@@ -106,9 +106,14 @@ App starts on Tomcat/Jetty with no Undertow class errors
 
 One of the few 4.0 breaks with no like-for-like replacement: you must change servers.
 
+#### From the field.
+
+Production reports describe this as the one true hard stop in the release: no boot, no shim, no workaround. Teams on Undertow switch servers while still on 3.5, re-tune under load, and only then attempt 4.0.
+
 ## Links {.footer-links}
 
 - [spring-break module: undertow-removed](https://github.com/spoole167/spring-break/tree/main/undertow-removed)
 
 - [Spring Boot 4.0 Migration Guide](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-4.0-Migration-Guide)
 
+- [Spring Boot 4.0 migration guide for production teams (DEV)](https://dev.to/aytronn/spring-boot-40-migration-guide-for-production-teams-what-actually-breaks-and-how-to-upgrade-safely-22me)

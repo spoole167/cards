@@ -108,9 +108,14 @@ App starts and security filter chain initialises without errors
 
 Driven by Spring Security 7.0. The old DSL was deprecated in Security 5.7/6.0; the lambda DSL has been the recommended replacement since Security 5.2. Affects every spring-boot-starter-security consumer. See also: websecurity-adapter-removed, auth-default-deny.
 
+#### From the field.
+
+Migration reports are bimodal. Teams that adopted the lambda DSL during the 5→6 upgrade call Security 7 a cleanup release; teams that ignored the 6.x deprecation warnings inherit the whole rewrite at once. This card is either an hour or a fortnight, and which one was decided years ago.
+
 ## Links {.footer-links}
 
 - [spring-break module: security-removed-apis](https://github.com/spoole167/spring-break/tree/main/security-removed-apis)
 
 - [Spring Security 7 migration guide](https://docs.spring.io/spring-security/reference/6.5/migration-7/configuration.html)
 
+- [Spring Security 5 to 6 to 7 migration guide (ankurm.com)](https://ankurm.com/spring-security-5-to-6-to-7-migration-guide/)

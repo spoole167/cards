@@ -107,9 +107,14 @@ Search for <code>extends JsonSerializer</code>, <code>extends JsonDeserializer</
 
 Driven by Jackson 3.0, upstream of Spring Boot 4.0, and finalised in Jackson 3.0-rc1. Affects spring-boot-starter-json consumers with custom serialisers. See also: jackson-group-id, jackson-exception-hierarchy.
 
+#### From the field.
+
+Real migration merge requests show what the recipe misses: custom serialisers and deserialisers written against Jackson 2 abstract classes (<code>JsonDeserializer</code> → <code>ValueDeserializer</code> and friends) still need hand-editing after the automated pass.
+
 ## Links {.footer-links}
 
 - [spring-break module: jackson-class-renames](https://github.com/spoole167/spring-break/tree/main/jackson-class-renames)
 
 - [Jackson 3 migration guide](https://github.com/FasterXML/jackson/blob/main/jackson3/MIGRATING_TO_JACKSON_3.md)
 
+- [Example migration MR: Spring Boot 3.2 → 4.0 breaking changes (GitLab)](https://gitlab.opencode.de/OC000004892873/Taxonomy/-/merge_requests/5)

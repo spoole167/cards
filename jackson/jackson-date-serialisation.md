@@ -103,6 +103,10 @@ JSON responses show dates in expected format (check API output)
 
 Driven by Jackson 3.0, upstream of Spring Boot 4.0, and announced in its release notes. See also: jackson-dates-timestamps, jackson-property-inclusion.
 
+#### From the field.
+
+The recurring report: integration tests that compare JSON character-by-character fail after the upgrade with zero logic changes. Boot ships <code>spring.jackson.use-jackson2-defaults=true</code> as an escape hatch that pins the old behaviour globally while you migrate consumers.
+
 ## Links {.footer-links}
 
 - [spring-break module: jackson-date-serialisation](https://github.com/spoole167/spring-break/tree/main/jackson-date-serialisation)
@@ -111,3 +115,4 @@ Driven by Jackson 3.0, upstream of Spring Boot 4.0, and announced in its release
 
 - [Jackson 3 in Spring (blog)](https://spring.io/blog/2025/10/07/introducing-jackson-3-support-in-spring/)
 
+- [Spring Boot 4 migration: what actually broke (Java Code Geeks)](https://www.javacodegeeks.com/2026/05/spring-boot-4-migration-breaking-changes-new-defaultsand-what-actually-broke.html)

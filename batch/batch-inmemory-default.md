@@ -83,9 +83,14 @@ Batch jobs persist execution history to the database when spring-boot-starter-ba
 
 In Boot 3.5, spring-boot-starter-batch with a JDBC datasource created the Batch schema and persisted job executions automatically. Code that relies on the Batch tables existing (auditing, restart logic, admin UI) breaks at runtime.
 
+#### From the field.
+
+A team migrating 3.5 → 4.0.0 hit random <code>OptimisticLockingFailureException</code> from the JDBC job repository when keeping their custom batch task executor; the Spring Batch maintainer confirmed it as a v6 bug, fixed in 6.0.2. The same thread shows the knock-on config surprises: <code>@EnableBatchProcessing</code> has to go, and <code>BatchDataSourceScriptDatabaseInitializer</code> went with it. Maintainer advice in the thread: one major at a time, latest 3.5.x first.
+
 ## Links {.footer-links}
 
 - [spring-break module: batch-in-memory-default](https://github.com/spoole167/spring-break/tree/main/batch-in-memory-default)
 
 - [Spring Boot 4.0 Migration Guide](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-4.0-Migration-Guide)
 
+- [Batch 6 migration: OptimisticLockingFailureException discussion (GitHub)](https://github.com/spring-projects/spring-batch/discussions/5121)

@@ -100,6 +100,10 @@ App starts with no DialectResolutionInfoMissingException
 
 Driven by Hibernate 7.0, upstream of Spring Boot 4.0. The classes were deprecated in Hibernate 6.0. Affects spring-boot-starter-data-jpa consumers. See also: hibernate-date-types, cascade-save-update.
 
+#### From the field.
+
+Post-migration audits name stale version-specific dialect settings as the most common leftover found in migrated configs. At least it fails loudly at startup rather than corrupting queries at runtime.
+
 ## Links {.footer-links}
 
 - [spring-break module: hibernate-dialect-removal](https://github.com/spoole167/spring-break/tree/main/hibernate-dialect-removal)
@@ -108,3 +112,4 @@ Driven by Hibernate 7.0, upstream of Spring Boot 4.0. The classes were deprecate
 
 - [Spring Boot 4.0 Migration Guide](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-4.0-Migration-Guide)
 
+- [Hibernate 5 to 6 to 7 migration guide (ankurm.com)](https://ankurm.com/hibernate-5-to-6-to-7-migration-guide/)

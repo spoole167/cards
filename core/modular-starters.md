@@ -92,6 +92,10 @@ App starts and ObjectMapper, Validator, and other auto-configured beans are pres
 
 In Boot 3.x every starter dragged in the entire auto-configuration bundle, so features like Jackson, Bean Validation, and Micrometer configured themselves without a declared dependency.
 
+#### From the field.
+
+The most-blogged runtime surprise of the release. The pattern is always the same: a bean that used to exist just isn't there, and you find out one starter at a time (the H2 console is the canonical example). Two tactics from teams who have done it: read the startup log's missing auto-configuration report instead of guessing, and use the "classic" starter POMs to get running first, then trim to modular starters at leisure.
+
 ## Links {.footer-links}
 
 - [spring-break module: modular-starters](https://github.com/spoole167/spring-break/tree/main/modular-starters)
@@ -100,3 +104,6 @@ In Boot 3.x every starter dragged in the entire auto-configuration bundle, so fe
 
 - [Modularizing Spring Boot (Spring Blog)](https://spring.io/blog/2025/10/28/modularizing-spring-boot)
 
+- [Spring Boot 4 modularization: fix missing auto-configuration (Dan Vega)](https://www.danvega.dev/blog/spring-boot-4-modularization)
+
+- [Modularizing Spring Boot (spring.io)](https://spring.io/blog/2025/10/28/modularizing-spring-boot/)
