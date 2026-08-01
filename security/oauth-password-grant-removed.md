@@ -53,7 +53,10 @@ spring:
         provider:
           my-api:
             token-uri: https://auth.example.com/oauth/token
-@@added
+```
+
+#### Added
+```diff-card
 spring:
   security:
     oauth2:
@@ -79,7 +82,10 @@ ClientRegistration.withRegistrationId("legacy")
     .clientId("my-client")
     .clientSecret("secret")
     .build();
-@@added
+```
+
+#### Added
+```diff-card
 ClientRegistration.withRegistrationId("legacy")
     .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
     .authorizationUri("https://auth.example.com/authorize")

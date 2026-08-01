@@ -54,7 +54,10 @@ class MyServiceSpec extends Specification {
         expect: service.doThing() == "result"
     }
 }
-@@added
+```
+
+#### Added
+```diff-card
 // MyServiceTest.java
 @SpringBootTest
 class MyServiceTest {

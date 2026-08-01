@@ -45,7 +45,10 @@ public RabbitRetryTemplateCustomizer retryCustomizer() {
         retryTemplate.setRetryPolicy(...);
     };
 }
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.boot.autoconfigure.amqp.RabbitTemplateRetrySettingsCustomizer;
 
 @Bean
@@ -60,7 +63,10 @@ public RabbitTemplateRetrySettingsCustomizer retryCustomizer() {
 ```diff-card
 # // Consumer-side retry customizer
 // Previously both publisher and consumer shared RabbitRetryTemplateCustomizer
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.boot.autoconfigure.amqp.RabbitListenerRetrySettingsCustomizer;
 
 @Bean

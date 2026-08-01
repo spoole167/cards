@@ -45,7 +45,10 @@ import org.hibernate.annotations.OrderBy;
 @Where(clause = "deleted = false")
 @OrderBy(clause = "name desc")
 private List<Post> posts;
-@@added
+```
+
+#### Added
+```diff-card
 import org.hibernate.annotations.SQLRestriction;
 import org.hibernate.annotations.SQLOrder;
 

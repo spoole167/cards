@@ -41,7 +41,10 @@ JPMS forbids multiple JARs contributing to the same package (split packages). In
     <type>pom</type>
     <scope>import</scope>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <!-- Managed by Spring Boot 4.0 parent POM — remove explicit BOM if using starter-parent -->
 ```
 
@@ -50,7 +53,10 @@ JPMS forbids multiple JARs contributing to the same package (split packages). In
 # // Java imports — specialised containers move to module sub-packages
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.containers.KafkaContainer;
-@@added
+```
+
+#### Added
+```diff-card
 import org.testcontainers.postgresql.PostgreSQLContainer;
 import org.testcontainers.kafka.KafkaContainer;
 ```
@@ -59,7 +65,10 @@ import org.testcontainers.kafka.KafkaContainer;
 ```diff-card
 # // GenericContainer stays put — no change needed
 import org.testcontainers.containers.GenericContainer;
-@@added
+```
+
+#### Added
+```diff-card
 import org.testcontainers.containers.GenericContainer;  // unchanged
 ```
 

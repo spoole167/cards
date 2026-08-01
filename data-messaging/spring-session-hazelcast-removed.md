@@ -40,7 +40,10 @@ Boot 4.0 handed several Spring Session store integrations to the teams closest t
     <groupId>org.springframework.session</groupId>
     <artifactId>spring-session-hazelcast</artifactId>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <!-- Boot 4.0: use Hazelcast team's own integration artifact -->
 <dependency>
     <groupId>com.hazelcast</groupId>

@@ -41,7 +41,10 @@ Silent return of <code>Object[]</code> hides intent and causes surprising <code>
 # // Add an explicit SELECT and result type
 session.createQuery("from Product p join p.category c")
        .getResultList();
-@@added
+```
+
+#### Added
+```diff-card
 session.createQuery(
     "SELECT p FROM Product p JOIN p.category c",
     Product.class
@@ -53,7 +56,10 @@ session.createQuery(
 # // Or use a typed tuple query
 session.createQuery("from Product p join p.category c")
        .getResultList();
-@@added
+```
+
+#### Added
+```diff-card
 session.createQuery(
     "SELECT p, c FROM Product p JOIN p.category c",
     Object[].class

@@ -49,7 +49,10 @@ The change gives <code>@Observed</code> full AspectJ semantics: it now works on 
     <groupId>io.micrometer</groupId>
     <artifactId>micrometer-tracing</artifactId>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <dependency>
     <groupId>io.micrometer</groupId>
     <artifactId>micrometer-tracing</artifactId>
@@ -64,7 +67,10 @@ The change gives <code>@Observed</code> full AspectJ semantics: it now works on 
 ```diff-card
 # // Configuration — register ObservedAspect if not auto-configured
 // ObservedAspect was auto-configured in Boot 3.x
-@@added
+```
+
+#### Added
+```diff-card
 @Configuration
 public class ObservabilityConfig {
     @Bean
@@ -78,7 +84,10 @@ public class ObservabilityConfig {
 ```diff-card
 # // application.properties — enable AspectJ auto-proxy
 # proxy-based AOP was sufficient
-@@added
+```
+
+#### Added
+```diff-card
 spring.aop.auto=true
 ```
 

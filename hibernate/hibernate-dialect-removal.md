@@ -43,7 +43,10 @@ A dialect class per database version created a combinatorial explosion. Runtime 
 ```diff-card
 # // application.properties
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL57Dialect
-@@added
+```
+
+#### Added
+```diff-card
 # Remove explicit dialect — Hibernate auto-detects from JDBC connection
 ```
 
@@ -51,7 +54,10 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL57Dialect
 ```diff-card
 # // application.properties — if you must be explicit
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQL95Dialect
-@@added
+```
+
+#### Added
+```diff-card
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 ```
 
@@ -59,7 +65,10 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 ```diff-card
 # // persistence.xml
 <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle12cDialect"/>
-@@added
+```
+
+#### Added
+```diff-card
 <property name="hibernate.dialect" value="org.hibernate.dialect.OracleDialect"/>
 ```
 

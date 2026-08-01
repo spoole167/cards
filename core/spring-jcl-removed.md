@@ -44,7 +44,10 @@ Commons Logging 1.3 added the same SLF4J bridge that spring-jcl provided, making
         </exclusion>
     </exclusions>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-core</artifactId>
@@ -59,7 +62,10 @@ Commons Logging 1.3 added the same SLF4J bridge that spring-jcl provided, making
     <groupId>org.springframework</groupId>
     <artifactId>spring-jcl</artifactId>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <!-- spring-jcl no longer exists. Commons Logging 1.3.0 bridges to SLF4J natively. -->
 ```
 

@@ -51,7 +51,10 @@ The old naming was misleading: "max attempts" of 3 producing only 2 retries was 
 ```diff-card
 # // Fix: reduce maxAttempts by 1 to preserve old behaviour
 @Retryable(maxAttempts = 3)
-@@added
+```
+
+#### Added
+```diff-card
 @Retryable(maxAttempts = 2)  // 1 initial + 2 retries = 3 total
 ```
 
@@ -59,7 +62,10 @@ The old naming was misleading: "max attempts" of 3 producing only 2 retries was 
 ```diff-card
 # // Or use the new explicit parameter
 @Retryable(maxAttempts = 3)
-@@added
+```
+
+#### Added
+```diff-card
 @Retryable(retries = 2)  // clearer: 2 retries after initial call
 ```
 
@@ -69,7 +75,10 @@ The old naming was misleading: "max attempts" of 3 producing only 2 retries was 
 RetryTemplate template = RetryTemplate.builder()
     .maxAttempts(3)
     .build();
-@@added
+```
+
+#### Added
+```diff-card
 RetryTemplate template = RetryTemplate.builder()
     .maxAttempts(2)  // was 3 — now means retries, not total
     .build();

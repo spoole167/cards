@@ -40,7 +40,10 @@ Boot 4.0 handed several Spring Session store integrations to the teams closest t
     <groupId>org.springframework.session</groupId>
     <artifactId>spring-session-data-mongodb</artifactId>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <!-- Boot 4.0: session support is part of spring-boot-starter-data-mongodb -->
 <dependency>
     <groupId>org.springframework.boot</groupId>

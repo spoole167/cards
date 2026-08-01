@@ -40,7 +40,10 @@ new SimpDestinationMessageMatcher("/topic/**");
 
 ```diff-card
 # // New — AuthorizationManager-based config
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.security.messaging.access.intercept.MessageMatcherDelegatingAuthorizationManager;
 // ...
 MessageMatcherDelegatingAuthorizationManager.builder()

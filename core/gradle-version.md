@@ -41,7 +41,10 @@ Gradle 8.14 introduced configuration cache stability and improved dependency res
 ```diff-card
 # // gradle/wrapper/gradle-wrapper.properties
 distributionUrl=https\://services.gradle.org/distributions/gradle-8.5-bin.zip
-@@added
+```
+
+#### Added
+```diff-card
 distributionUrl=https\://services.gradle.org/distributions/gradle-8.14-bin.zip
 ```
 
@@ -49,7 +52,10 @@ distributionUrl=https\://services.gradle.org/distributions/gradle-8.14-bin.zip
 ```diff-card
 # // Alternative: jump to Gradle 9
 distributionUrl=https\://services.gradle.org/distributions/gradle-8.5-bin.zip
-@@added
+```
+
+#### Added
+```diff-card
 distributionUrl=https\://services.gradle.org/distributions/gradle-9.0-bin.zip
 ```
 

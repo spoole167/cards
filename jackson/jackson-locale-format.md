@@ -44,7 +44,10 @@ BCP 47 is the web standard used by HTTP <code>Accept-Language</code> headers, HT
 ```diff-card
 # // Custom serialiser to restore old format
 // No custom serialiser needed in Boot 3.5
-@@added
+```
+
+#### Added
+```diff-card
 @JsonSerialize(using = JavaLocaleSerializer.class)
 private Locale userLocale;
 ```
@@ -53,7 +56,10 @@ private Locale userLocale;
 ```diff-card
 # // Or update all consumers to use BCP 47
 String localeKey = user.getLocale(); // "zh_CN"
-@@added
+```
+
+#### Added
+```diff-card
 String localeKey = Locale.forLanguageTag(user.getLocale()).toString(); // normalise
 ```
 
@@ -61,7 +67,10 @@ String localeKey = Locale.forLanguageTag(user.getLocale()).toString(); // normal
 ```diff-card
 # // Fix i18n lookup maps
 i18nMap.put("zh_CN", chineseLabels);
-@@added
+```
+
+#### Added
+```diff-card
 i18nMap.put("zh-CN", chineseLabels);
 ```
 

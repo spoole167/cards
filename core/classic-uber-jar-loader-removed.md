@@ -51,7 +51,10 @@ The classic loader was deprecated in Spring Boot 3.2 when the nested-jar loader 
         <loaderImplementation>CLASSIC</loaderImplementation>
     </configuration>
 </plugin>
-@@added
+```
+
+#### Added
+```diff-card
 <plugin>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-maven-plugin</artifactId>
@@ -65,7 +68,10 @@ The classic loader was deprecated in Spring Boot 3.2 when the nested-jar loader 
 tasks.named("bootJar") {
     loaderImplementation = LoaderImplementation.CLASSIC
 }
-@@added
+```
+
+#### Added
+```diff-card
 // No loaderImplementation configuration needed
 ```
 

@@ -44,7 +44,10 @@ import org.springframework.util.concurrent.ListenableFuture;
 public ListenableFuture<String> fetchData() {
     return AsyncResult.forValue(doWork());
 }
-@@added
+```
+
+#### Added
+```diff-card
 import java.util.concurrent.CompletableFuture;
 
 @Async
@@ -61,7 +64,10 @@ future.addCallback(
     result -> log.info("Success: {}", result),
     ex -> log.error("Failed", ex)
 );
-@@added
+```
+
+#### Added
+```diff-card
 CompletableFuture<String> future = asyncService.fetchData();
 future.whenComplete((result, ex) -> {
     if (ex != null) log.error("Failed", ex);

@@ -39,7 +39,10 @@ MongoDB auto-configuration moved into a dedicated persistence module, and the ol
 spring.data.mongodb.uri=mongodb://user:pass@host:27017/mydb
 spring.data.mongodb.database=mydb
 spring.data.mongodb.auto-index-creation=true
-@@added
+```
+
+#### Added
+```diff-card
 spring.mongodb.uri=mongodb://user:pass@host:27017/mydb
 spring.mongodb.database=mydb
 spring.mongodb.auto-index-creation=true
@@ -49,7 +52,10 @@ spring.mongodb.auto-index-creation=true
 ```diff-card
 # // Actuator health properties
 management.health.mongo.enabled=false
-@@added
+```
+
+#### Added
+```diff-card
 management.health.mongodb.enabled=false
 ```
 

@@ -33,7 +33,10 @@ Spring Boot 4.0 consolidated test-context infrastructure into a more coherent pa
 ```diff-card
 # // Import on custom test annotation
 import org.springframework.boot.test.autoconfigure.properties.PropertyMapping;
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.boot.test.context.PropertyMapping;
 ```
 

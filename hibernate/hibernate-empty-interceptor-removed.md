@@ -48,7 +48,10 @@ public class MyInterceptor extends EmptyInterceptor {
 
 ```diff-card
 # // After — implementing Interceptor directly
-@@added
+```
+
+#### Added
+```diff-card
 import org.hibernate.Interceptor;
 
 public class MyInterceptor implements Interceptor {

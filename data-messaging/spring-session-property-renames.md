@@ -41,7 +41,10 @@ spring.session.redis.namespace=myapp:session
 spring.session.redis.flush-mode=on-save
 spring.session.redis.save-mode=on-set-attribute
 spring.session.redis.cleanup-cron=0 * * * * *
-@@added
+```
+
+#### Added
+```diff-card
 spring.session.data.redis.namespace=myapp:session
 spring.session.data.redis.flush-mode=on-save
 spring.session.data.redis.save-mode=on-set-attribute
@@ -52,7 +55,10 @@ spring.session.data.redis.cleanup-cron=0 * * * * *
 ```diff-card
 # // MongoDB session properties
 spring.session.mongodb.collection-name=sessions
-@@added
+```
+
+#### Added
+```diff-card
 spring.session.data.mongodb.collection-name=sessions
 ```
 

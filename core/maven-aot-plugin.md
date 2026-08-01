@@ -44,7 +44,10 @@ AOT processing was refactored for GraalVM 25 compatibility and to support the ne
     <artifactId>spring-boot-maven-plugin</artifactId>
     <version>3.4.1</version>
 </plugin>
-@@added
+```
+
+#### Added
+```diff-card
 <plugin>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-maven-plugin</artifactId>

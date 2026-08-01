@@ -39,7 +39,10 @@ The old <code>SerializationFeature</code> enum values don't map one-to-one to Ja
 ```diff-card
 # // application.properties — old (silently ignored)
 spring.jackson.serialization.write-dates-as-timestamps=true
-@@added
+```
+
+#### Added
+```diff-card
 # Removed — configure via ObjectMapper customiser instead
 ```
 
@@ -47,7 +50,10 @@ spring.jackson.serialization.write-dates-as-timestamps=true
 ```diff-card
 # // ObjectMapper customiser replacement
 # (relied on spring.jackson.serialization.write-dates-as-timestamps)
-@@added
+```
+
+#### Added
+```diff-card
 @Bean
 public Jackson2ObjectMapperBuilderCustomizer timestampDates() {
     return builder -> builder.featuresToEnable(
@@ -60,7 +66,10 @@ public Jackson2ObjectMapperBuilderCustomizer timestampDates() {
 ```diff-card
 # // Alternative: per-field annotation
 private Instant timestamp;
-@@added
+```
+
+#### Added
+```diff-card
 @JsonFormat(shape = JsonFormat.Shape.NUMBER)
 private Instant timestamp;
 ```

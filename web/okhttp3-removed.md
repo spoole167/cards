@@ -44,7 +44,10 @@ public RestClient restClient() {
         .requestFactory(new OkHttp3ClientHttpRequestFactory())
         .build();
 }
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.http.client.JdkClientHttpRequestFactory;
 
 @Bean
@@ -62,7 +65,10 @@ public RestClient restClient() {
     <groupId>com.squareup.okhttp3</groupId>
     <artifactId>okhttp</artifactId>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <!-- JdkClientHttpRequestFactory uses java.net.http — no extra dependency needed -->
 ```
 

@@ -42,7 +42,10 @@ Probes are useful outside Kubernetes: load balancers, service meshes, and health
 # // application.properties — disable probes if not wanted
 # Boot 3.5: probes off by default outside Kubernetes
 # management.endpoint.health.probes.enabled=true  # required to enable
-@@added
+```
+
+#### Added
+```diff-card
 # Boot 4.0: probes on by default; disable explicitly if not needed
 management.endpoint.health.probes.enabled=false
 ```

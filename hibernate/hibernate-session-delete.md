@@ -35,7 +35,10 @@ These methods were Hibernate-proprietary duplicates of the JPA standard API. Hav
 ```diff-card
 # // Deleting an entity
 session.delete(order);
-@@added
+```
+
+#### Added
+```diff-card
 session.remove(order);
 ```
 
@@ -43,7 +46,10 @@ session.remove(order);
 ```diff-card
 # // Saving an entity
 session.save(newOrder);
-@@added
+```
+
+#### Added
+```diff-card
 session.persist(newOrder);
 ```
 
@@ -51,7 +57,10 @@ session.persist(newOrder);
 ```diff-card
 # // Updating an entity
 session.update(existingOrder);
-@@added
+```
+
+#### Added
+```diff-card
 session.merge(existingOrder);
 ```
 
@@ -59,7 +68,10 @@ session.merge(existingOrder);
 ```diff-card
 # // Save-or-update pattern
 session.saveOrUpdate(order);
-@@added
+```
+
+#### Added
+```diff-card
 session.merge(order);
 ```
 

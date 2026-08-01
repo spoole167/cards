@@ -52,7 +52,10 @@ http
         .and()
     .logout()
         .logoutSuccessUrl("/");
-@@added
+```
+
+#### Added
+```diff-card
 http
     .authorizeHttpRequests(auth -> auth
         .requestMatchers("/public/**").permitAll()
@@ -71,7 +74,10 @@ http
 ```diff-card
 # // CSRF configuration
 http.csrf().disable();
-@@added
+```
+
+#### Added
+```diff-card
 http.csrf(csrf -> csrf.disable());
 ```
 

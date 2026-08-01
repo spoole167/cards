@@ -44,7 +44,10 @@ GraalVM 25 introduced a new metadata format and improved closed-world analysis. 
     <artifactId>native-maven-plugin</artifactId>
     <version>0.9.28</version>
 </plugin>
-@@added
+```
+
+#### Added
+```diff-card
 <plugin>
     <groupId>org.graalvm.buildtools</groupId>
     <artifactId>native-maven-plugin</artifactId>
@@ -58,7 +61,10 @@ GraalVM 25 introduced a new metadata format and improved closed-world analysis. 
 plugins {
     id 'org.graalvm.buildtools.native' version '0.9.28'
 }
-@@added
+```
+
+#### Added
+```diff-card
 plugins {
     id 'org.graalvm.buildtools.native' version '0.10.6'
 }
@@ -68,7 +74,10 @@ plugins {
 ```diff-card
 # // JAVA_HOME / GRAALVM_HOME
 export GRAALVM_HOME=/opt/graalvm-ce-java17-22.3.5
-@@added
+```
+
+#### Added
+```diff-card
 export GRAALVM_HOME=/opt/graalvm-jdk-25+35
 ```
 

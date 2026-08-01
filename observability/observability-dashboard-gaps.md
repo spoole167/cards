@@ -47,7 +47,10 @@ Controller spans added an extra span per request and duplicated information alre
 ```diff-card
 # // application.properties — re-enable controller spans
 # (default in Boot 3.5: controller spans enabled)
-@@added
+```
+
+#### Added
+```diff-card
 management.tracing.enabled=true
 spring.mvc.observation.auto-configuration.enabled=true
 ```
@@ -56,7 +59,10 @@ spring.mvc.observation.auto-configuration.enabled=true
 ```diff-card
 # // Or enable via ObservationRegistry customiser
 # (auto-instrumentation was on by default)
-@@added
+```
+
+#### Added
+```diff-card
 @Bean
 public ObservationRegistryCustomizer<ObservationRegistry> serverSpans() {
     return registry -> registry.observationConfig()
@@ -68,7 +74,10 @@ public ObservationRegistryCustomizer<ObservationRegistry> serverSpans() {
 ```diff-card
 # // Micrometer tracing config
 # (no explicit config needed in Boot 3.5)
-@@added
+```
+
+#### Added
+```diff-card
 management.observations.http.server.requests.enabled=true
 management.observations.http.client.requests.enabled=true
 ```

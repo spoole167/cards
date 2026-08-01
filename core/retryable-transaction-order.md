@@ -52,7 +52,10 @@ Retrying outside the transaction is safer: a failed transaction rolls back fully
 @Retryable(maxAttempts = 3)
 @Transactional
 public void placeOrder(Order order) {
-@@added
+```
+
+#### Added
+```diff-card
 @Retryable(maxAttempts = 3)
 @Transactional
 @Order(Ordered.HIGHEST_PRECEDENCE)  // force tx to wrap retry
@@ -63,7 +66,10 @@ public void placeOrder(Order order) {
 ```diff-card
 # // Or set global ordering in configuration
 # (default ordering in Boot 3.5: tx outside, retry inside)
-@@added
+```
+
+#### Added
+```diff-card
 @EnableRetry(order = Ordered.LOWEST_PRECEDENCE)
 // Ensures retry runs inside the transaction
 ```
@@ -73,7 +79,10 @@ public void placeOrder(Order order) {
 # // Best practice: separate the concerns
 @Retryable @Transactional
 public void placeOrder(Order order) { ... }
-@@added
+```
+
+#### Added
+```diff-card
 // Outer bean: handles retry
 @Retryable(maxAttempts = 3)
 public void placeOrderWithRetry(Order order) {

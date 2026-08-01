@@ -42,7 +42,10 @@ Boot 4.0's modular restructuring dropped auto-configurations for reactive integr
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-pulsar-reactive</artifactId>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <!-- Boot 4.0: use imperative starter or configure reactive beans manually -->
 <dependency>
     <groupId>org.springframework.boot</groupId>

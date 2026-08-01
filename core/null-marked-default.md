@@ -51,7 +51,10 @@ Formal null contracts let tools catch <code>NullPointerException</code> bugs at 
 # // Handle nullable return from getProperty()
 String name = env.getProperty("app.name");
 return name.toUpperCase();
-@@added
+```
+
+#### Added
+```diff-card
 String name = env.getProperty("app.name");
 if (name == null) {
     throw new IllegalStateException("app.name not configured");
@@ -63,7 +66,10 @@ return name.toUpperCase();
 ```diff-card
 # // Or use the non-null variant
 String name = env.getProperty("app.name");
-@@added
+```
+
+#### Added
+```diff-card
 String name = env.getRequiredProperty("app.name");
 ```
 
@@ -71,7 +77,10 @@ String name = env.getRequiredProperty("app.name");
 ```diff-card
 # // Suppress warnings during migration
 // (no null warnings in Boot 3.5)
-@@added
+```
+
+#### Added
+```diff-card
 // Temporarily suppress in build.gradle
 tasks.withType(JavaCompile) {
     options.compilerArgs += ['-Xlint:-nullness']

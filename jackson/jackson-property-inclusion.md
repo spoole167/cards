@@ -43,7 +43,10 @@ Jackson 3 moved inclusion configuration from a single global enum to a granular 
 ```diff-card
 # // application.properties — old (silently ignored)
 spring.jackson.default-property-inclusion=non_null
-@@added
+```
+
+#### Added
+```diff-card
 # Removed — configure via ObjectMapper bean instead
 ```
 
@@ -51,7 +54,10 @@ spring.jackson.default-property-inclusion=non_null
 ```diff-card
 # // ObjectMapper customiser bean
 # (relied on spring.jackson.default-property-inclusion)
-@@added
+```
+
+#### Added
+```diff-card
 @Bean
 public Jackson2ObjectMapperBuilderCustomizer nonNullInclusion() {
     return builder -> builder
@@ -63,7 +69,10 @@ public Jackson2ObjectMapperBuilderCustomizer nonNullInclusion() {
 ```diff-card
 # // Or per-class annotation
 public class UserDto {
-@@added
+```
+
+#### Added
+```diff-card
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserDto {
 ```

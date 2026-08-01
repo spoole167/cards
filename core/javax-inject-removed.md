@@ -44,7 +44,10 @@ The Jakarta EE transition moved all <code>javax.*</code> APIs to <code>jakarta.*
 # // Java imports
 import javax.inject.Inject;
 import javax.inject.Named;
-@@added
+```
+
+#### Added
+```diff-card
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
 ```
@@ -57,7 +60,10 @@ import jakarta.inject.Named;
     <artifactId>javax.inject</artifactId>
     <version>1</version>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <dependency>
     <groupId>jakarta.inject</groupId>
     <artifactId>jakarta.inject-api</artifactId>
@@ -71,7 +77,10 @@ import jakarta.inject.Named;
 public class OrderService {
     @Inject
     private OrderRepository repo;
-@@added
+```
+
+#### Added
+```diff-card
 @Service("orderService")
 public class OrderService {
     @Autowired

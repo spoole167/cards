@@ -36,7 +36,10 @@ Live Reload opens a port (35729) on the developer's machine and needs a browser 
 ```diff-card
 # // application-dev.properties or application.properties
 # Boot 3.5: live reload on by default, no property needed
-@@added
+```
+
+#### Added
+```diff-card
 # Boot 4.0: must opt in
 spring.devtools.livereload.enabled=true
 ```

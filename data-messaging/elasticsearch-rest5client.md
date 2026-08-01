@@ -35,7 +35,10 @@ The Elasticsearch Java client library introduced <code>Rest5Client</code> as the
 ```diff-card
 # // Import
 import org.elasticsearch.client.RestClient;
-@@added
+```
+
+#### Added
+```diff-card
 import org.elasticsearch.client.Rest5Client;
 ```
 
@@ -44,7 +47,10 @@ import org.elasticsearch.client.Rest5Client;
 # // Injection
 @Autowired
 private RestClient restClient;
-@@added
+```
+
+#### Added
+```diff-card
 @Autowired
 private Rest5Client restClient;
 ```
@@ -54,7 +60,10 @@ private Rest5Client restClient;
 # // Customizer bean (if used)
 @Bean
 public RestClientBuilderCustomizer customizer() { ... }
-@@added
+```
+
+#### Added
+```diff-card
 @Bean
 public Rest5ClientBuilderCustomizer customizer() { ... }
 ```
