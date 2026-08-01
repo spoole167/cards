@@ -47,7 +47,10 @@ OpenSAML 4 is no longer maintained. OpenSAML 5 brought significant API improveme
     <artifactId>opensaml-saml-impl</artifactId>
     <version>4.3.2</version>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <dependency>
     <groupId>org.opensaml</groupId>
     <artifactId>opensaml-saml-api</artifactId>
@@ -68,7 +71,10 @@ import org.springframework.security.saml2.provider.service.authentication
 
 OpenSaml4AuthenticationProvider provider =
     new OpenSaml4AuthenticationProvider();
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.security.saml2.provider.service.authentication
     .OpenSaml5AuthenticationProvider;
 
@@ -86,7 +92,10 @@ provider.setResponseValidator(responseToken -> {
         OpenSaml4AuthenticationProvider
             .createDefaultResponseValidator()
             .convert(responseToken);
-@@added
+```
+
+#### Added
+```diff-card
 OpenSaml5AuthenticationProvider provider =
     new OpenSaml5AuthenticationProvider();
 provider.setResponseValidator(responseToken -> {

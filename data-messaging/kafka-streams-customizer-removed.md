@@ -34,7 +34,10 @@ Spring Boot's interface was a thin duplicate of one Spring Kafka already provide
 ```diff-card
 # // Import
 import org.springframework.boot.autoconfigure.kafka.StreamsBuilderFactoryBeanCustomizer;
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.kafka.config.StreamsBuilderFactoryBeanConfigurer;
 ```
 
@@ -43,7 +46,10 @@ import org.springframework.kafka.config.StreamsBuilderFactoryBeanConfigurer;
 # // Bean method signature
 @Bean
 public StreamsBuilderFactoryBeanCustomizer customizer() { ... }
-@@added
+```
+
+#### Added
+```diff-card
 @Bean
 public StreamsBuilderFactoryBeanConfigurer configurer() { ... }
 ```
@@ -52,7 +58,10 @@ public StreamsBuilderFactoryBeanConfigurer configurer() { ... }
 ```diff-card
 # // implements clause
 public class MyCustomizer implements StreamsBuilderFactoryBeanCustomizer {
-@@added
+```
+
+#### Added
+```diff-card
 public class MyCustomizer implements StreamsBuilderFactoryBeanConfigurer {
 ```
 

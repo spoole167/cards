@@ -53,7 +53,10 @@ public class OrderClient {
             "/orders/{id}", Order.class, id);
     }
 }
-@@added
+```
+
+#### Added
+```diff-card
 @Service
 public class OrderClient {
     private final RestClient restClient;
@@ -82,7 +85,10 @@ class OrderClientTest {
     private MockRestServiceServer server;
     @Autowired
     private OrderClient client;
-@@added
+```
+
+#### Added
+```diff-card
 @RestClientTest(OrderClient.class)
 class OrderClientTest {
     @Autowired

@@ -45,7 +45,10 @@ try {
 } catch (IOException e) {
     return ResponseEntity.badRequest().body("Invalid JSON");
 }
-@@added
+```
+
+#### Added
+```diff-card
 try {
     Order order = objectMapper.readValue(body, Order.class);
 } catch (JacksonException e) {
@@ -58,7 +61,10 @@ try {
 # // Spring @ExceptionHandler — before
 @ExceptionHandler(IOException.class)
 public ResponseEntity<String> handleJsonError(IOException ex) {
-@@added
+```
+
+#### Added
+```diff-card
 @ExceptionHandler(JacksonException.class)
 public ResponseEntity<String> handleJsonError(JacksonException ex) {
 ```
@@ -67,7 +73,10 @@ public ResponseEntity<String> handleJsonError(JacksonException ex) {
 ```diff-card
 # // Method signature cleanup
 public Order parseOrder(String json) throws IOException {
-@@added
+```
+
+#### Added
+```diff-card
 public Order parseOrder(String json) {
 ```
 

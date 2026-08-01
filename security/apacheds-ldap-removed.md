@@ -38,7 +38,10 @@ ApacheDS development had stalled and its Jakarta EE compatibility lagged. Unboun
     <artifactId>apacheds-server-jndi</artifactId>
     <scope>test</scope>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <dependency>
     <groupId>com.unboundid</groupId>
     <artifactId>unboundid-ldapsdk</artifactId>
@@ -52,7 +55,10 @@ ApacheDS development had stalled and its Jakarta EE compatibility lagged. Unboun
 import org.springframework.security.ldap.server.ApacheDSContainer;
 // ...
 new ApacheDSContainer("dc=springframework,dc=org", "classpath:users.ldif");
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.security.ldap.server.UnboundIdContainer;
 // ...
 new UnboundIdContainer("dc=springframework,dc=org", "classpath:users.ldif");

@@ -33,7 +33,10 @@ EnvironmentPostProcessor is used across many contexts, so it moved to the root p
 ```diff-card
 # // EnvironmentPostProcessor import
 import org.springframework.boot.env.EnvironmentPostProcessor;
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.boot.EnvironmentPostProcessor;
 ```
 

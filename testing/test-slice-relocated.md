@@ -48,7 +48,10 @@ The test auto-configuration was restructured to support the new bean override me
 @ImportAutoConfiguration
 public @interface CustomServiceTest {
 }
-@@added
+```
+
+#### Added
+```diff-card
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @BootstrapWith(SpringBootTestContextBootstrapper.class)

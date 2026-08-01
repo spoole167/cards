@@ -34,7 +34,10 @@ $ mvn compile
 ```diff-card
 # // JobStep launcher → operator
 jobStep.setJobLauncher(jobLauncher);
-@@added
+```
+
+#### Added
+```diff-card
 jobStep.setJobOperator(jobOperator);
 ```
 

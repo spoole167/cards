@@ -43,7 +43,10 @@ UTF-8 is the universal standard for text encoding. Platform-default encoding pro
         <pattern>%d{yyyy-MM-dd} %-5level %msg%n</pattern>
     </encoder>
 </appender>
-@@added
+```
+
+#### Added
+```diff-card
 <!-- Boot 4.0: UTF-8 is default; specify charset explicitly if you need platform encoding -->
 <appender name="FILE" class="ch.qos.logback.core.FileAppender">
     <file>app.log</file>

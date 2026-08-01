@@ -40,7 +40,10 @@ The processor now validates HQL/JPQL queries at compile time and generates type-
     <artifactId>hibernate-jpamodelgen</artifactId>
     <scope>provided</scope>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <dependency>
     <groupId>org.hibernate.orm</groupId>
     <artifactId>hibernate-processor</artifactId>
@@ -52,7 +55,10 @@ The processor now validates HQL/JPQL queries at compile time and generates type-
 ```diff-card
 # // build.gradle — annotation processor
 annotationProcessor 'org.hibernate.orm:hibernate-jpamodelgen'
-@@added
+```
+
+#### Added
+```diff-card
 annotationProcessor 'org.hibernate.orm:hibernate-processor'
 ```
 
@@ -63,7 +69,10 @@ annotationProcessor 'org.hibernate.orm:hibernate-processor'
     <groupId>org.hibernate.orm</groupId>
     <artifactId>hibernate-jpamodelgen</artifactId>
 </path>
-@@added
+```
+
+#### Added
+```diff-card
 <path>
     <groupId>org.hibernate.orm</groupId>
     <artifactId>hibernate-processor</artifactId>

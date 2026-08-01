@@ -43,7 +43,10 @@ public class MyJobListener extends JobExecutionListenerSupport {
         // only override what you need
     }
 }
-@@added
+```
+
+#### Added
+```diff-card
 public class MyJobListener implements JobExecutionListener {
     @Override
     public void afterJob(JobExecution jobExecution) {

@@ -39,7 +39,10 @@ Spring Retry's release cadence diverged from Spring Boot's. Managing it in the B
     <groupId>org.springframework.retry</groupId>
     <artifactId>spring-retry</artifactId>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <dependency>
     <groupId>org.springframework.retry</groupId>
     <artifactId>spring-retry</artifactId>
@@ -51,7 +54,10 @@ Spring Retry's release cadence diverged from Spring Boot's. Managing it in the B
 ```diff-card
 # // build.gradle — add explicit version
 implementation 'org.springframework.retry:spring-retry'
-@@added
+```
+
+#### Added
+```diff-card
 implementation 'org.springframework.retry:spring-retry:2.0.11'
 ```
 

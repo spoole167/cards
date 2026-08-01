@@ -53,7 +53,10 @@ class MyControllerTest {
     @Autowired
     MockMvc mockMvc;
 }
-@@added
+```
+
+#### Added
+```diff-card
 @SpringBootTest
 @AutoConfigureMockMvc
 class MyControllerTest {
@@ -64,7 +67,10 @@ class MyControllerTest {
 
 ```diff-card
 # // @WebMvcTest is unaffected — MockMvc is its primary purpose
-@@added
+```
+
+#### Added
+```diff-card
 // @WebMvcTest already includes MockMvc auto-configuration.
 // Only @SpringBootTest is affected.
 ```

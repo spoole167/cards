@@ -45,7 +45,10 @@ The monolithic jar meant any starter pulled in auto-configuration for hundreds o
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-web</artifactId>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-web</artifactId>

@@ -45,7 +45,10 @@ HTTP/protobuf is more universally supported, works through proxies and load bala
 ```diff-card
 # // application.properties — keep using gRPC
 # default was gRPC on port 4317
-@@added
+```
+
+#### Added
+```diff-card
 management.otlp.tracing.transport=grpc
 management.otlp.tracing.endpoint=http://otel-collector:4317
 management.otlp.metrics.export.transport=grpc
@@ -56,7 +59,10 @@ management.otlp.metrics.export.endpoint=http://otel-collector:4317
 ```diff-card
 # // application.properties — accept new HTTP default
 management.otlp.tracing.endpoint=http://otel-collector:4317
-@@added
+```
+
+#### Added
+```diff-card
 management.otlp.tracing.endpoint=http://otel-collector:4318/v1/traces
 ```
 
@@ -67,7 +73,10 @@ otel-collector:
   image: otel/opentelemetry-collector:latest
   ports:
     - "4317:4317"   # gRPC
-@@added
+```
+
+#### Added
+```diff-card
 otel-collector:
   image: otel/opentelemetry-collector:latest
   ports:

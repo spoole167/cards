@@ -36,7 +36,10 @@ Spring Boot 4.0 modularised its testing support. Separating the REST test client
 ```diff-card
 # // Test class import
 import org.springframework.boot.test.web.client.TestRestTemplate;
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.boot.resttestclient.TestRestTemplate;
 ```
 

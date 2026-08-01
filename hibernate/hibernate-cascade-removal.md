@@ -48,7 +48,10 @@ import org.hibernate.annotations.CascadeType;
 @OneToMany(mappedBy = "order")
 @Cascade(CascadeType.SAVE_UPDATE)
 private List<OrderItem> items;
-@@added
+```
+
+#### Added
+```diff-card
 @OneToMany(mappedBy = "order", cascade = {
     javax.persistence.CascadeType.PERSIST,
     javax.persistence.CascadeType.MERGE
@@ -62,7 +65,10 @@ private List<OrderItem> items;
 @OneToMany(mappedBy = "parent")
 @Cascade({CascadeType.SAVE_UPDATE, CascadeType.DELETE})
 private Set<Child> children;
-@@added
+```
+
+#### Added
+```diff-card
 @OneToMany(mappedBy = "parent", cascade = {
     CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE
 })

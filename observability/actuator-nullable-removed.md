@@ -43,7 +43,10 @@ public class MyEndpoint {
     @ReadOperation
     public String get(@Nullable String name) { ... }
 }
-@@added
+```
+
+#### Added
+```diff-card
 import org.jspecify.annotations.Nullable;
 
 @Endpoint(id = "my-endpoint")

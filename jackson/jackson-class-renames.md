@@ -45,7 +45,10 @@ public class DateSerializer extends JsonSerializer<LocalDate> {
     @Override
     public void serialize(LocalDate value, JsonGenerator gen,
             SerializerProvider provider) throws IOException {
-@@added
+```
+
+#### Added
+```diff-card
 import tools.jackson.databind.ser.ValueSerializer;
 import tools.jackson.databind.SerializationContext;
 
@@ -61,7 +64,10 @@ public class DateSerializer extends ValueSerializer<LocalDate> {
 import com.fasterxml.jackson.databind.JsonDeserializer;
 
 public class DateDeserializer extends JsonDeserializer<LocalDate> {
-@@added
+```
+
+#### Added
+```diff-card
 import tools.jackson.databind.deser.ValueDeserializer;
 
 public class DateDeserializer extends ValueDeserializer<LocalDate> {
@@ -71,7 +77,10 @@ public class DateDeserializer extends ValueDeserializer<LocalDate> {
 ```diff-card
 # // Exception handling
 import com.fasterxml.jackson.databind.JsonMappingException;
-@@added
+```
+
+#### Added
+```diff-card
 import tools.jackson.databind.DatabindException;
 ```
 

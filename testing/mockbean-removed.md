@@ -40,14 +40,20 @@ The new annotations live in Spring Framework's test context, so they work in pla
 ```diff-card
 # // Import change
 import org.springframework.boot.test.mock.mockito.MockBean;
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 ```
 
 #### Removed
 ```diff-card
 import org.springframework.boot.test.mock.mockito.SpyBean;
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.test.context.bean.override.mockito.MockitoSpyBean;
 ```
 
@@ -59,7 +65,10 @@ private OrderRepository orderRepository;
 
 @SpyBean
 private NotificationService notificationService;
-@@added
+```
+
+#### Added
+```diff-card
 @MockitoBean
 private OrderRepository orderRepository;
 

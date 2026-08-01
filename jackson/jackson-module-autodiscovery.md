@@ -38,7 +38,10 @@ Automatic discovery lets library authors ship Jackson integration without requir
 ```diff-card
 # // application.properties — disable auto-discovery to restore Boot 3.5 behaviour
 # Boot 3.5: no property needed, only well-known modules registered
-@@added
+```
+
+#### Added
+```diff-card
 # Boot 4.0: disable auto-discovery to prevent unexpected module activation
 spring.jackson.find-and-add-modules=false
 ```

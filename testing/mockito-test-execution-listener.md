@@ -49,7 +49,10 @@ class MyTest {
     @Mock
     private MyService myService;
 }
-@@added
+```
+
+#### Added
+```diff-card
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
 class MyTest {
@@ -66,7 +69,10 @@ class MyTest {
     @Mock
     private MyService myService;
 }
-@@added
+```
+
+#### Added
+```diff-card
 @SpringBootTest
 class MyTest {
     @MockitoBean

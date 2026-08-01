@@ -40,7 +40,10 @@ Jackson's maintainers separated the project identity from the original FasterXML
     <groupId>com.fasterxml.jackson.core</groupId>
     <artifactId>jackson-databind</artifactId>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <dependency>
     <groupId>tools.jackson.core</groupId>
     <artifactId>jackson-databind</artifactId>
@@ -52,7 +55,10 @@ Jackson's maintainers separated the project identity from the original FasterXML
 # // Java imports — ObjectMapper and core types
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
-@@added
+```
+
+#### Added
+```diff-card
 import tools.jackson.databind.ObjectMapper;
 import tools.jackson.core.JacksonException;
 ```

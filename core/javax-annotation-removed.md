@@ -42,7 +42,10 @@ The Jakarta EE transition moved all <code>javax.*</code> APIs to <code>jakarta.*
 # // Java imports
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
-@@added
+```
+
+#### Added
+```diff-card
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 ```
@@ -55,7 +58,10 @@ import jakarta.annotation.PreDestroy;
     <artifactId>javax.annotation-api</artifactId>
     <version>1.3.2</version>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <dependency>
     <groupId>jakarta.annotation</groupId>
     <artifactId>jakarta.annotation-api</artifactId>

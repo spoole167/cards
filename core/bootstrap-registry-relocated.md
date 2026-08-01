@@ -33,7 +33,10 @@ Spring Boot 4.0 groups its infrastructure by concern: bootstrap lifecycle classe
 ```diff-card
 # // BootstrapRegistry import
 import org.springframework.boot.BootstrapRegistry;
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.boot.bootstrap.BootstrapRegistry;
 ```
 
@@ -41,7 +44,10 @@ import org.springframework.boot.bootstrap.BootstrapRegistry;
 ```diff-card
 # // ConfigurableBootstrapContext import
 import org.springframework.boot.ConfigurableBootstrapContext;
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.boot.bootstrap.ConfigurableBootstrapContext;
 ```
 

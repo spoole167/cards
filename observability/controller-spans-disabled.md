@@ -46,7 +46,10 @@ The controller and view spans added overhead and noise for applications that did
 ```diff-card
 # // application.properties — re-enable controller spans
 # default: controller spans were enabled
-@@added
+```
+
+#### Added
+```diff-card
 management.observations.http.server.requests.controller.enabled=true
 management.observations.http.server.requests.view.enabled=true
 ```
@@ -55,7 +58,10 @@ management.observations.http.server.requests.view.enabled=true
 ```diff-card
 # // application.yml equivalent
 # default: controller spans were enabled
-@@added
+```
+
+#### Added
+```diff-card
 management:
   observations:
     http:

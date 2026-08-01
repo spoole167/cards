@@ -49,7 +49,10 @@ The classpath scanning approach in <code>webjars-locator-core</code> added start
     <groupId>org.webjars</groupId>
     <artifactId>webjars-locator-core</artifactId>
 </dependency>
-@@added
+```
+
+#### Added
+```diff-card
 <dependency>
     <groupId>org.webjars</groupId>
     <artifactId>webjars-locator-lite</artifactId>
@@ -62,7 +65,10 @@ The classpath scanning approach in <code>webjars-locator-core</code> added start
 import org.webjars.WebJarAssetLocator;
 WebJarAssetLocator locator = new WebJarAssetLocator();
 String path = locator.getFullPath("jquery", "jquery.min.js");
-@@added
+```
+
+#### Added
+```diff-card
 import org.webjars.lite.WebJarAssetLocator;
 WebJarAssetLocator locator = new WebJarAssetLocator();
 String path = locator.getFullPath("jquery", "jquery.min.js");

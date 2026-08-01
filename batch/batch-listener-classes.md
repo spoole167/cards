@@ -45,7 +45,10 @@ public class JobCompletionListener extends JobExecutionListenerSupport {
         log.info("Job completed: {}", jobExecution.getStatus());
     }
 }
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.batch.core.JobExecutionListener;
 
 public class JobCompletionListener implements JobExecutionListener {
@@ -62,7 +65,10 @@ public class JobCompletionListener implements JobExecutionListener {
 import org.springframework.batch.core.listener.StepExecutionListenerSupport;
 
 public class StepLogger extends StepExecutionListenerSupport {
-@@added
+```
+
+#### Added
+```diff-card
 import org.springframework.batch.core.StepExecutionListener;
 
 public class StepLogger implements StepExecutionListener {
