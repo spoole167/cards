@@ -31,33 +31,33 @@ These methods were Hibernate-proprietary duplicates of the JPA standard API. Hav
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Deleting an entity
-@@removed
 session.delete(order);
 @@added
 session.remove(order);
 ```
 
+#### Removed
 ```diff-card
 # // Saving an entity
-@@removed
 session.save(newOrder);
 @@added
 session.persist(newOrder);
 ```
 
+#### Removed
 ```diff-card
 # // Updating an entity
-@@removed
 session.update(existingOrder);
 @@added
 session.merge(existingOrder);
 ```
 
+#### Removed
 ```diff-card
 # // Save-or-update pattern
-@@removed
 session.saveOrUpdate(order);
 @@added
 session.merge(order);

@@ -41,9 +41,9 @@ The listener duplicated Mockito's own JUnit 5 extension. Removing it pushes test
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Add MockitoExtension alongside @SpringBootTest
-@@removed
 @SpringBootTest
 class MyTest {
     @Mock
@@ -58,9 +58,9 @@ class MyTest {
 }
 ```
 
+#### Removed
 ```diff-card
 # // Or switch to @MockitoBean (Boot 4.0 replacement for @MockBean)
-@@removed
 @SpringBootTest
 class MyTest {
     @Mock

@@ -38,9 +38,9 @@ The monolithic jar meant any starter pulled in auto-configuration for hundreds o
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // pom.xml — add starters that were previously implicit
-@@removed
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-web</artifactId>

@@ -37,25 +37,25 @@ ISO-8601 strings are human-readable, timezone-aware, and the de facto standard i
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // application.properties — restore old behaviour
-@@removed
 # (no explicit setting needed in Boot 3.5)
 @@added
 spring.jackson.serialization.write-dates-as-timestamps=true
 ```
 
+#### Removed
 ```diff-card
 # // or adopt ISO-8601 and fix the client
-@@removed
 const ts = new Date(response.created);  // was a number
 @@added
 const ts = new Date(response.created);  // now parses ISO string
 ```
 
+#### Removed
 ```diff-card
 # // ObjectMapper explicit configuration
-@@removed
 // Jackson 2 default: timestamps enabled
 ObjectMapper mapper = new ObjectMapper();
 mapper.registerModule(new JavaTimeModule());

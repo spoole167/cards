@@ -46,9 +46,9 @@ Formal null contracts let tools catch <code>NullPointerException</code> bugs at 
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Handle nullable return from getProperty()
-@@removed
 String name = env.getProperty("app.name");
 return name.toUpperCase();
 @@added
@@ -59,17 +59,17 @@ if (name == null) {
 return name.toUpperCase();
 ```
 
+#### Removed
 ```diff-card
 # // Or use the non-null variant
-@@removed
 String name = env.getProperty("app.name");
 @@added
 String name = env.getRequiredProperty("app.name");
 ```
 
+#### Removed
 ```diff-card
 # // Suppress warnings during migration
-@@removed
 // (no null warnings in Boot 3.5)
 @@added
 // Temporarily suppress in build.gradle

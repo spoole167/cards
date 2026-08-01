@@ -31,9 +31,9 @@ Commons Logging 1.3 added the same SLF4J bridge that spring-jcl provided, making
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // pom.xml — remove spring-jcl exclusion/inclusion
-@@removed
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-core</artifactId>
@@ -52,9 +52,9 @@ Commons Logging 1.3 added the same SLF4J bridge that spring-jcl provided, making
 </dependency>
 ```
 
+#### Removed
 ```diff-card
 # // pom.xml — remove explicit spring-jcl dependency
-@@removed
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-jcl</artifactId>

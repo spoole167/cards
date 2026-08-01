@@ -47,25 +47,25 @@ The old naming was misleading: "max attempts" of 3 producing only 2 retries was 
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Fix: reduce maxAttempts by 1 to preserve old behaviour
-@@removed
 @Retryable(maxAttempts = 3)
 @@added
 @Retryable(maxAttempts = 2)  // 1 initial + 2 retries = 3 total
 ```
 
+#### Removed
 ```diff-card
 # // Or use the new explicit parameter
-@@removed
 @Retryable(maxAttempts = 3)
 @@added
 @Retryable(retries = 2)  // clearer: 2 retries after initial call
 ```
 
+#### Removed
 ```diff-card
 # // RetryTemplate configuration
-@@removed
 RetryTemplate template = RetryTemplate.builder()
     .maxAttempts(3)
     .build();

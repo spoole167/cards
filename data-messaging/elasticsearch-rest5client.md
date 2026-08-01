@@ -31,17 +31,17 @@ The Elasticsearch Java client library introduced <code>Rest5Client</code> as the
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Import
-@@removed
 import org.elasticsearch.client.RestClient;
 @@added
 import org.elasticsearch.client.Rest5Client;
 ```
 
+#### Removed
 ```diff-card
 # // Injection
-@@removed
 @Autowired
 private RestClient restClient;
 @@added
@@ -49,9 +49,9 @@ private RestClient restClient;
 private Rest5Client restClient;
 ```
 
+#### Removed
 ```diff-card
 # // Customizer bean (if used)
-@@removed
 @Bean
 public RestClientBuilderCustomizer customizer() { ... }
 @@added

@@ -38,9 +38,9 @@ Spring Security 7.0 makes <code>AuthorizationManager</code> the sole supported a
 </dependency>
 ```
 
+#### Removed
 ```diff-card
 # // Preferred: migrate to AuthorizationManager
-@@removed
 import org.springframework.security.access.AccessDecisionManager;
 // implements AccessDecisionManager
 @@added

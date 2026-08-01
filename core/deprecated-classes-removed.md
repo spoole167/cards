@@ -39,9 +39,9 @@ Spring Boot 3.x deprecated several <code>RestTemplateBuilder</code> methods to s
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Migrate from RestTemplate to RestClient
-@@removed
 @Bean
 public RestTemplate restTemplate(RestTemplateBuilder builder) {
     return builder

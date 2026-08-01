@@ -45,9 +45,9 @@ The implicit bean was a hidden dependency: tests got MockMvc without declaring t
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Add @AutoConfigureMockMvc
-@@removed
 @SpringBootTest
 class MyControllerTest {
     @Autowired

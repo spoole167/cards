@@ -31,9 +31,9 @@ The rename of <code>ChunkHandler</code> clarifies its role in the request/respon
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // ChunkHandler rename
-@@removed
 import org.springframework.batch.integration.chunk.ChunkHandler;
 // ...
 ChunkHandler handler = ...;

@@ -42,9 +42,9 @@ The classpath scanning approach in <code>webjars-locator-core</code> added start
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // pom.xml — replace locator dependency
-@@removed
 <dependency>
     <groupId>org.webjars</groupId>
     <artifactId>webjars-locator-core</artifactId>
@@ -56,9 +56,9 @@ The classpath scanning approach in <code>webjars-locator-core</code> added start
 </dependency>
 ```
 
+#### Removed
 ```diff-card
 # // Code using WebJarAssetLocator directly
-@@removed
 import org.webjars.WebJarAssetLocator;
 WebJarAssetLocator locator = new WebJarAssetLocator();
 String path = locator.getFullPath("jquery", "jquery.min.js");

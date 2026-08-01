@@ -35,9 +35,9 @@ The test auto-configuration was restructured to support the new bean override me
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Custom test-slice annotation
-@@removed
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @BootstrapWith(SpringBootTestContextBootstrapper.class)

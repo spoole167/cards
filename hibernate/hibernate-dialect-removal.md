@@ -39,25 +39,25 @@ A dialect class per database version created a combinatorial explosion. Runtime 
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // application.properties
-@@removed
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL57Dialect
 @@added
 # Remove explicit dialect — Hibernate auto-detects from JDBC connection
 ```
 
+#### Removed
 ```diff-card
 # // application.properties — if you must be explicit
-@@removed
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQL95Dialect
 @@added
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 ```
 
+#### Removed
 ```diff-card
 # // persistence.xml
-@@removed
 <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle12cDialect"/>
 @@added
 <property name="hibernate.dialect" value="org.hibernate.dialect.OracleDialect"/>

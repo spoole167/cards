@@ -36,9 +36,9 @@ Silent return of <code>Object[]</code> hides intent and causes surprising <code>
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Add an explicit SELECT and result type
-@@removed
 session.createQuery("from Product p join p.category c")
        .getResultList();
 @@added
@@ -48,9 +48,9 @@ session.createQuery(
 ).getResultList();
 ```
 
+#### Removed
 ```diff-card
 # // Or use a typed tuple query
-@@removed
 session.createQuery("from Product p join p.category c")
        .getResultList();
 @@added
