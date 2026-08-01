@@ -5,7 +5,7 @@ tier_label: Wrong Results
 title: '@NullMarked Default — IDE/Compiler Null Safety'
 series: spring-boot 3.5 → 4.0
 effort: M
-openrewrite: false
+openrewrite: none
 subsystem: core
 no_module: true
 no_module_reason: 'Compile-time and IDE-only change: runtime behaviour is unchanged,

@@ -5,7 +5,7 @@ tier_label: Won't Run
 title: Spring Batch Now Uses In-Memory Job Repository by Default
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: false
+openrewrite: none
 subsystem: batch
 ---
 

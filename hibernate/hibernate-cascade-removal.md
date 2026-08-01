@@ -5,7 +5,7 @@ tier_label: Won't Run
 title: CascadeType.SAVE_UPDATE Removed in Hibernate 7
 series: spring-boot 3.5 → 4.0
 effort: M
-openrewrite: true
+openrewrite: io.moderne.hibernate.update66.MigrateCascadeTypes (Moderne catalog only)
 subsystem: hibernate
 ---
 

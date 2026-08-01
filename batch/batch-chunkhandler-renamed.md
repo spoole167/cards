@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: Spring Batch ChunkHandler Renamed to ChunkRequestHandler
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: false
+openrewrite: org.openrewrite.java.spring.batch.SpringBatch5To6Migration
 subsystem: batch
 ---
 

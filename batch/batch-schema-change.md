@@ -5,7 +5,7 @@ tier_label: Won't Run
 title: Spring Batch 6 Schema Sequence Rename
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: true
+openrewrite: none
 subsystem: batch
 ---
 

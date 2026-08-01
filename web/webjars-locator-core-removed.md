@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: webjars-locator-core Removed from BOM
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: false
+openrewrite: none
 subsystem: web
 ---
 

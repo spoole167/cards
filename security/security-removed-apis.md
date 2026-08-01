@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: Security DSL Rewrite
 series: spring-boot 3.5 → 4.0
 effort: L
-openrewrite: true
+openrewrite: org.openrewrite.java.spring.security5.UpgradeSpringSecurity_5_8
 subsystem: security
 max_pages: 2
 ---

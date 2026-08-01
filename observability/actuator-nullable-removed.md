@@ -5,7 +5,7 @@ tier_label: Won't Run
 title: 'Actuator Endpoint @Nullable: org.springframework.lang Replaced by JSpecify'
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: false
+openrewrite: org.openrewrite.java.jspecify.MigrateFromSpringFrameworkAnnotations
 subsystem: observability
 no_module: true
 no_module_reason: |

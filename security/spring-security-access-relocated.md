@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: Spring Security Access API Moved to spring-security-access
 series: spring-boot 3.5 → 4.0
 effort: M
-openrewrite: false
+openrewrite: none
 subsystem: security
 ---
 

@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: OpenSAML 4 Support Removed
 series: spring-boot 3.5 → 4.0
 effort: L
-openrewrite: false
+openrewrite: none
 subsystem: security
 max_pages: 3
 ---

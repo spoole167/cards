@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: Gradle 8.14+ / Gradle 9 Required
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: false
+openrewrite: org.openrewrite.java.spring.boot4.UpgradeSpringBoot_4_0
 subsystem: core
 no_module: true
 no_module_reason: 'Gradle plugin version constraint: only observable via a Gradle

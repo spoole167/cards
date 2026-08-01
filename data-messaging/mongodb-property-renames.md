@@ -5,7 +5,7 @@ tier_label: Wrong Results
 title: MongoDB Configuration Properties Renamed
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: true
+openrewrite: org.openrewrite.java.spring.boot4.SpringBootProperties_4_0
 subsystem: data-messaging
 ---
 

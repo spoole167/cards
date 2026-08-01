@@ -5,7 +5,7 @@ tier_label: Wrong Results
 title: '@Retryable + @Transactional AOP Ordering Change'
 series: spring-boot 3.5 → 4.0
 effort: M
-openrewrite: false
+openrewrite: none
 subsystem: core
 ---
 

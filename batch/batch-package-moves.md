@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: Spring Batch Core Package Relocations
 series: spring-boot 3.5 → 4.0
 effort: M
-openrewrite: false
+openrewrite: org.openrewrite.java.spring.batch.SpringBatch5To6Migration
 subsystem: batch
 ---
 

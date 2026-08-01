@@ -5,7 +5,7 @@ tier_label: Wrong Results
 title: 'Path Matching Engine: AntPathMatcher → PathPattern'
 series: spring-boot 3.5 → 4.0
 effort: M
-openrewrite: false
+openrewrite: none
 subsystem: web
 ---
 

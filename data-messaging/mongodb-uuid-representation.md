@@ -5,7 +5,7 @@ tier_label: Wrong Results
 title: MongoDB UUID and BigDecimal Representations No Longer Defaulted
 series: spring-boot 3.5 → 4.0
 effort: M
-openrewrite: false
+openrewrite: none
 subsystem: data-messaging
 no_module: true
 no_module_reason: |

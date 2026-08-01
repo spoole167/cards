@@ -5,7 +5,7 @@ tier_label: Wrong Results
 title: Jackson 3 Auto-Discovers All Modules on Classpath
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: false
+openrewrite: none
 subsystem: jackson
 ---
 

@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: AOP Starter Renamed to spring-boot-starter-aspectj
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: false
+openrewrite: org.openrewrite.java.spring.boot4.UpgradeSpringBoot_4_0
 subsystem: core
 ---
 

@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: hibernate-jpamodelgen Renamed
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: true
+openrewrite: org.openrewrite.hibernate.MigrateToHibernate70
 subsystem: hibernate
 ---
 

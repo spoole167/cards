@@ -5,7 +5,7 @@ tier_label: Wrong Results
 title: Liveness and Readiness Probes Enabled by Default
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: false
+openrewrite: none
 subsystem: observability
 ---
 

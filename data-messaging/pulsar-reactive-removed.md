@@ -5,7 +5,7 @@ tier_label: Won't Run
 title: Spring Pulsar Reactive Auto-Configuration Removed
 series: spring-boot 3.5 → 4.0
 effort: M
-openrewrite: false
+openrewrite: org.openrewrite.java.spring.boot4.RemoveSpringPulsarReactive (Moderne catalog only)
 subsystem: data-messaging
 ---
 

@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: ListenableFuture Removed
 series: spring-boot 3.5 → 4.0
 effort: M
-openrewrite: false
+openrewrite: org.openrewrite.java.spring.util.concurrent.ListenableToCompletableFuture
 subsystem: core
 ---
 
@@ -77,7 +77,7 @@ Change return types from <code>ListenableFuture&lt;T&gt;</code> to <code>Complet
 
 #### Use OpenRewrite.
 
-The <code>org.openrewrite.java.spring.framework.MigrateSpringAssert</code> recipe set includes <code>ListenableFuture</code> migration.
+The <code>org.openrewrite.java.spring.util.concurrent.ListenableToCompletableFuture</code> recipe migrates <code>ListenableFuture</code> types, <code>addCallback()</code> calls, and <code>ListenableFutureCallback</code> implementations. It runs automatically as part of the Spring Framework 6.0 upgrade chain.
 
 ## Scope Check {.scope-check}
 

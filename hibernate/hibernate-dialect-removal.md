@@ -5,7 +5,7 @@ tier_label: Won't Run
 title: Version-Specific Hibernate Dialects Removed
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: true
+openrewrite: org.openrewrite.hibernate.MigrateDialect
 subsystem: hibernate
 ---
 

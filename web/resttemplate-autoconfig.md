@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: RestTemplate Auto-Configuration Removed
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: false
+openrewrite: org.openrewrite.java.spring.boot4.MigrateToModularStarters
 subsystem: web
 ---
 

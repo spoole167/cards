@@ -5,7 +5,7 @@ tier_label: Won't Run
 title: '@SpringBootTest No Longer Auto-Configures MockMvc'
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: false
+openrewrite: org.openrewrite.java.spring.boot4.AddAutoConfigureMockMvc
 subsystem: testing
 no_module: true
 no_module_reason: |

@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: BootstrapRegistry Relocated to org.springframework.boot.bootstrap
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: false
+openrewrite: none
 subsystem: core
 ---
 

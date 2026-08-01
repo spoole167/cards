@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: Jackson 3.0 Group ID Change
 series: spring-boot 3.5 → 4.0
 effort: L
-openrewrite: true
+openrewrite: org.openrewrite.java.jackson.UpgradeJackson_2_3
 subsystem: jackson
 max_pages: 2
 ---

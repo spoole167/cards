@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: Testcontainers 2.0 Package Relocation
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: true
+openrewrite: org.openrewrite.java.testing.testcontainers.Testcontainers2Migration
 subsystem: testing
 ---
 

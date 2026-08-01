@@ -5,7 +5,7 @@ tier_label: Wrong Results
 title: spring.jackson.default-property-inclusion Silently Ignored
 series: spring-boot 3.5 → 4.0
 effort: M
-openrewrite: false
+openrewrite: none
 subsystem: jackson
 ---
 

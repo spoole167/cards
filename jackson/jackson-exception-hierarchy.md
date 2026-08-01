@@ -5,7 +5,7 @@ tier_label: Won't Run
 title: JacksonException No Longer Extends IOException
 series: spring-boot 3.5 → 4.0
 effort: M
-openrewrite: true
+openrewrite: org.openrewrite.java.jackson.UpgradeJackson_2_3_TypeChanges
 subsystem: jackson
 ---
 

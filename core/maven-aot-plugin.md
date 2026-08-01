@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: Maven Plugin Version Alignment for AOT
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: true
+openrewrite: org.openrewrite.java.spring.boot4.UpgradeSpringBoot_4_0
 subsystem: core
 no_module: true
 no_module_reason: Requires spring-boot:process-aot goal; not a standard test execution

@@ -5,7 +5,7 @@ tier_label: Won't Run
 title: Hibernate Untyped Join Query Rejected at Runtime
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: false
+openrewrite: none
 subsystem: hibernate
 ---
 

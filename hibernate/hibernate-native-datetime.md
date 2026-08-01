@@ -5,7 +5,7 @@ tier_label: Wrong Results
 title: Hibernate Native Query Date Return Types Changed
 series: spring-boot 3.5 → 4.0
 effort: M
-openrewrite: false
+openrewrite: none
 subsystem: hibernate
 ---
 

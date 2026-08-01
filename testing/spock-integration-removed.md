@@ -5,7 +5,7 @@ tier_label: Won't Run
 title: Spring Boot Spock Integration Removed
 series: spring-boot 3.5 → 4.0
 effort: L
-openrewrite: false
+openrewrite: none
 max_pages: 2
 subsystem: testing
 no_module: true

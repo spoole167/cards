@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: '@EntityScan Relocated to persistence.autoconfigure'
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: false
+openrewrite: org.openrewrite.java.spring.boot4.MigrateAutoconfigurePackages
 subsystem: hibernate
 ---
 

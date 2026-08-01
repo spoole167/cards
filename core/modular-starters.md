@@ -5,7 +5,7 @@ tier_label: Won't Run
 title: Modular Auto-Configuration
 series: spring-boot 3.5 → 4.0
 effort: M
-openrewrite: false
+openrewrite: org.openrewrite.java.spring.boot4.MigrateToModularStarters
 subsystem: core
 no_module: true
 no_module_reason: |

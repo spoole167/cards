@@ -5,7 +5,7 @@ tier_label: Won't Run
 title: OAuth 2.0 Password Grant Completely Removed
 series: spring-boot 3.5 → 4.0
 effort: L
-openrewrite: false
+openrewrite: none
 subsystem: security
 max_pages: 3
 ---

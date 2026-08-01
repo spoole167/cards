@@ -5,7 +5,7 @@ tier_label: Won't Run
 title: write-dates-as-timestamps Property Breaks Startup
 series: spring-boot 3.5 → 4.0
 effort: M
-openrewrite: false
+openrewrite: org.openrewrite.java.spring.boot4.SpringBootProperties_4_0
 subsystem: jackson
 ---
 

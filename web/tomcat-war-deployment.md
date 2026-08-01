@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: Tomcat WAR Deployment Requires New Runtime Starter
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: false
+openrewrite: none
 subsystem: web
 no_module: true
 no_module_reason: |

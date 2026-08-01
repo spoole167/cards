@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: '@MockBean / @SpyBean Removed'
 series: spring-boot 3.5 → 4.0
 effort: M
-openrewrite: true
+openrewrite: org.openrewrite.java.spring.boot4.ReplaceMockBeanAndSpyBean
 subsystem: testing
 max_pages: 2
 ---

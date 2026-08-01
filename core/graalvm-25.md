@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: GraalVM 25 for Native Image Builds
 series: spring-boot 3.5 → 4.0
 effort: M
-openrewrite: false
+openrewrite: none
 subsystem: core
 no_module: true
 no_module_reason: Requires native:compile with GraalVM 25; not invocable from mvn

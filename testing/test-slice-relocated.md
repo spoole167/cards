@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: Test-Slice Annotation Starters Relocated
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: true
+openrewrite: org.openrewrite.java.spring.boot4.MigrateAutoconfigurePackages
 subsystem: testing
 ---
 

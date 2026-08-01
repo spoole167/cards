@@ -5,7 +5,7 @@ tier_label: Won't Run
 title: Deprecated RestTemplateBuilder APIs Removed
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: false
+openrewrite: none
 subsystem: core
 no_module: true
 no_module_reason: |

@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: HttpHeaders No Longer Implements MultiValueMap
 series: spring-boot 3.5 → 4.0
 effort: M
-openrewrite: false
+openrewrite: none
 subsystem: web
 ---
 

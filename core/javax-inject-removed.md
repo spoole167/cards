@@ -5,7 +5,7 @@ tier_label: Won't Run
 title: javax.inject Removed
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: true
+openrewrite: org.openrewrite.java.migrate.jakarta.JavaxInjectMigrationToJakartaInject
 subsystem: core
 ---
 

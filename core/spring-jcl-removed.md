@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: spring-jcl Removed
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: true
+openrewrite: org.openrewrite.java.spring.framework7.RemoveSpringJcl (Moderne catalog only)
 subsystem: core
 ---
 

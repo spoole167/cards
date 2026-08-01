@@ -5,7 +5,7 @@ tier_label: Wrong Results
 title: Controller/View Spans Silently Disabled
 series: spring-boot 3.5 → 4.0
 effort: M
-openrewrite: false
+openrewrite: none
 subsystem: observability
 no_module: true
 no_module_reason: Same break as controller-spans-disabled from a dashboard perspective;

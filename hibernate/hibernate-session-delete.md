@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: Session.delete() Removed
 series: spring-boot 3.5 → 4.0
 effort: M
-openrewrite: true
+openrewrite: org.openrewrite.hibernate.MigrateToHibernate70
 subsystem: hibernate
 ---
 

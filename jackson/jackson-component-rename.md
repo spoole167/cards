@@ -6,7 +6,7 @@ title: '@JsonComponent and @JsonMixin Renamed to @JacksonComponent and @JacksonM
 series: spring-boot 3.5 → 4.0
 effort: S
 openrewrite: |-
-  false
+  none
   The root cause, the Jackson 3 package migration, is covered by the jackson-group-id module. Developers migrating to Boot 4.0 hit the package change first; the annotation rename is a secondary step once that migration is complete.
 subsystem: jackson
 ---

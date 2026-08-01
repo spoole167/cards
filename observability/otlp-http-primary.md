@@ -5,7 +5,7 @@ tier_label: Won't Run
 title: OTLP/HTTP Now Primary Export Protocol
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: false
+openrewrite: none
 subsystem: observability
 no_module: true
 no_module_reason: Port/transport change requires a live OTLP collector; cannot be

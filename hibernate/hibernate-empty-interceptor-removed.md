@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: Hibernate EmptyInterceptor Removed
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: false
+openrewrite: org.openrewrite.hibernate.EmptyInterceptorToInterface
 subsystem: hibernate
 ---
 

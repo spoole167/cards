@@ -5,7 +5,7 @@ tier_label: Won't Run
 title: PKCE Mandatory for Confidential OAuth Clients
 series: spring-boot 3.5 → 4.0
 effort: M
-openrewrite: false
+openrewrite: none
 subsystem: security
 ---
 

@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: Batch Listener Base Classes Removed
 series: spring-boot 3.5 → 4.0
 effort: M
-openrewrite: true
+openrewrite: org.openrewrite.java.spring.batch.SpringBatch5To6Migration
 subsystem: batch
 ---
 

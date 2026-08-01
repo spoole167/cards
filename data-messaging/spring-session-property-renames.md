@@ -5,7 +5,7 @@ tier_label: Wrong Results
 title: Spring Session Property Prefixes Renamed
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: false
+openrewrite: org.openrewrite.java.spring.boot4.SpringBootProperties_4_0
 subsystem: data-messaging
 ---
 

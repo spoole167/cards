@@ -5,7 +5,7 @@ tier_label: Won't Build
 title: Hibernate @Where and @OrderBy Removed
 series: spring-boot 3.5 → 4.0
 effort: S
-openrewrite: false
+openrewrite: none
 subsystem: hibernate
 ---
 
