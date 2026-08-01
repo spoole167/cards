@@ -34,9 +34,9 @@ The <code>data</code> infix ties each session store's configuration to its Sprin
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Redis session properties
-@@removed
 spring.session.redis.namespace=myapp:session
 spring.session.redis.flush-mode=on-save
 spring.session.redis.save-mode=on-set-attribute
@@ -48,9 +48,9 @@ spring.session.data.redis.save-mode=on-set-attribute
 spring.session.data.redis.cleanup-cron=0 * * * * *
 ```
 
+#### Removed
 ```diff-card
 # // MongoDB session properties
-@@removed
 spring.session.mongodb.collection-name=sessions
 @@added
 spring.session.data.mongodb.collection-name=sessions

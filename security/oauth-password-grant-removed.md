@@ -38,9 +38,9 @@ The password grant hands user credentials directly to the client application, de
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // application.yml — client registration
-@@removed
 spring:
   security:
     oauth2:
@@ -70,9 +70,9 @@ spring:
             issuer-uri: https://auth.example.com
 ```
 
+#### Removed
 ```diff-card
 # // Java configuration — programmatic registration
-@@removed
 ClientRegistration.withRegistrationId("legacy")
     .authorizationGrantType(AuthorizationGrantType.PASSWORD)
     .tokenUri("https://auth.example.com/oauth/token")

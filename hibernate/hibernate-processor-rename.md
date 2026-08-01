@@ -32,9 +32,9 @@ The processor now validates HQL/JPQL queries at compile time and generates type-
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // pom.xml — annotation processor dependency
-@@removed
 <dependency>
     <groupId>org.hibernate.orm</groupId>
     <artifactId>hibernate-jpamodelgen</artifactId>
@@ -48,17 +48,17 @@ The processor now validates HQL/JPQL queries at compile time and generates type-
 </dependency>
 ```
 
+#### Removed
 ```diff-card
 # // build.gradle — annotation processor
-@@removed
 annotationProcessor 'org.hibernate.orm:hibernate-jpamodelgen'
 @@added
 annotationProcessor 'org.hibernate.orm:hibernate-processor'
 ```
 
+#### Removed
 ```diff-card
 # // maven-compiler-plugin annotationProcessorPaths
-@@removed
 <path>
     <groupId>org.hibernate.orm</groupId>
     <artifactId>hibernate-jpamodelgen</artifactId>

@@ -35,9 +35,9 @@ Spring Boot 4.0 removed the <code>org.springframework.boot.web.client</code> pac
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Injecting the HTTP client — service class
-@@removed
 @Service
 public class OrderClient {
     private final RestTemplate restTemplate;
@@ -73,9 +73,9 @@ public class OrderClient {
 }
 ```
 
+#### Removed
 ```diff-card
 # // Test — using @RestClientTest
-@@removed
 @RestClientTest(OrderClient.class)
 class OrderClientTest {
     @Autowired

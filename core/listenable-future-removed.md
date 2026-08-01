@@ -35,9 +35,9 @@ $ mvn compile
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Async method return type
-@@removed
 import org.springframework.util.concurrent.ListenableFuture;
 
 @Async
@@ -53,9 +53,9 @@ public CompletableFuture<String> fetchData() {
 }
 ```
 
+#### Removed
 ```diff-card
 # // Callback-based usage
-@@removed
 ListenableFuture<String> future = asyncService.fetchData();
 future.addCallback(
     result -> log.info("Success: {}", result),

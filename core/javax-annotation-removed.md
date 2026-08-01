@@ -37,9 +37,9 @@ The Jakarta EE transition moved all <code>javax.*</code> APIs to <code>jakarta.*
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Java imports
-@@removed
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 @@added
@@ -47,9 +47,9 @@ import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 ```
 
+#### Removed
 ```diff-card
 # // pom.xml — if you had an explicit dependency
-@@removed
 <dependency>
     <groupId>javax.annotation</groupId>
     <artifactId>javax.annotation-api</artifactId>

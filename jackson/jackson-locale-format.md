@@ -40,26 +40,26 @@ BCP 47 is the web standard used by HTTP <code>Accept-Language</code> headers, HT
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Custom serialiser to restore old format
-@@removed
 // No custom serialiser needed in Boot 3.5
 @@added
 @JsonSerialize(using = JavaLocaleSerializer.class)
 private Locale userLocale;
 ```
 
+#### Removed
 ```diff-card
 # // Or update all consumers to use BCP 47
-@@removed
 String localeKey = user.getLocale(); // "zh_CN"
 @@added
 String localeKey = Locale.forLanguageTag(user.getLocale()).toString(); // normalise
 ```
 
+#### Removed
 ```diff-card
 # // Fix i18n lookup maps
-@@removed
 i18nMap.put("zh_CN", chineseLabels);
 @@added
 i18nMap.put("zh-CN", chineseLabels);

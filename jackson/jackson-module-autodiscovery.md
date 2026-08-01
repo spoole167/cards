@@ -34,9 +34,9 @@ Automatic discovery lets library authors ship Jackson integration without requir
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // application.properties — disable auto-discovery to restore Boot 3.5 behaviour
-@@removed
 # Boot 3.5: no property needed, only well-known modules registered
 @@added
 # Boot 4.0: disable auto-discovery to prevent unexpected module activation

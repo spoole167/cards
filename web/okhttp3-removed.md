@@ -33,9 +33,9 @@ The JDK's built-in <code>java.net.http.HttpClient</code> (since Java 11) and the
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // RestClient configuration
-@@removed
 import org.springframework.http.client.OkHttp3ClientHttpRequestFactory;
 
 @Bean
@@ -55,9 +55,9 @@ public RestClient restClient() {
 }
 ```
 
+#### Removed
 ```diff-card
 # // pom.xml — remove OkHttp dependency
-@@removed
 <dependency>
     <groupId>com.squareup.okhttp3</groupId>
     <artifactId>okhttp</artifactId>

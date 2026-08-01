@@ -32,9 +32,9 @@ Boot 4.0 handed several Spring Session store integrations to the teams closest t
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // pom.xml — add Hazelcast team's Spring Session integration
-@@removed
 <!-- Boot 3.5: built-in, no extra dependency needed beyond spring-session-hazelcast -->
 <dependency>
     <groupId>org.springframework.session</groupId>

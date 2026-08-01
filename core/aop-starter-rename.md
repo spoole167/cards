@@ -29,9 +29,9 @@ Spring AOP (interface-proxy and CGLIB-proxy based AOP) works without any starter
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // pom.xml dependency
-@@removed
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-aop</artifactId>

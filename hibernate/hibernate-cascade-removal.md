@@ -39,9 +39,9 @@ The <code>saveOrUpdate()</code> method was deprecated in Hibernate 6 as part of 
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Using Hibernate @Cascade annotation
-@@removed
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
 
@@ -56,9 +56,9 @@ private List<OrderItem> items;
 private List<OrderItem> items;
 ```
 
+#### Removed
 ```diff-card
 # // Using JPA cascade with Hibernate extras
-@@removed
 @OneToMany(mappedBy = "parent")
 @Cascade({CascadeType.SAVE_UPDATE, CascadeType.DELETE})
 private Set<Child> children;

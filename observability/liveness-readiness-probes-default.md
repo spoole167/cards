@@ -37,9 +37,9 @@ Probes are useful outside Kubernetes: load balancers, service meshes, and health
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // application.properties — disable probes if not wanted
-@@removed
 # Boot 3.5: probes off by default outside Kubernetes
 # management.endpoint.health.probes.enabled=true  # required to enable
 @@added

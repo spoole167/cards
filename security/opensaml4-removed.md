@@ -34,9 +34,9 @@ OpenSAML 4 is no longer maintained. OpenSAML 5 brought significant API improveme
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Maven dependency
-@@removed
 <dependency>
     <groupId>org.opensaml</groupId>
     <artifactId>opensaml-saml-api</artifactId>
@@ -60,9 +60,9 @@ OpenSAML 4 is no longer maintained. OpenSAML 5 brought significant API improveme
 </dependency>
 ```
 
+#### Removed
 ```diff-card
 # // Java config — authentication provider
-@@removed
 import org.springframework.security.saml2.provider.service.authentication
     .OpenSaml4AuthenticationProvider;
 
@@ -76,9 +76,9 @@ OpenSaml5AuthenticationProvider provider =
     new OpenSaml5AuthenticationProvider();
 ```
 
+#### Removed
 ```diff-card
 # // Java config — custom response validator
-@@removed
 OpenSaml4AuthenticationProvider provider =
     new OpenSaml4AuthenticationProvider();
 provider.setResponseValidator(responseToken -> {

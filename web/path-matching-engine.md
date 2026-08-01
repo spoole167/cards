@@ -43,25 +43,25 @@ Spring Boot 4.0 switched the default URL path matching engine from <code>AntPath
 
 ## The Fix {.diffs}
 
+#### Removed
 ```diff-card
 # // Fix: use PathPattern syntax for multi-segment match
-@@removed
 .requestMatchers("/api/**/admin").hasRole("ADMIN")
 @@added
 .requestMatchers("/api/{*path}/admin").hasRole("ADMIN")
 ```
 
+#### Removed
 ```diff-card
 # // Trailing slash no longer matches by default
-@@removed
 .requestMatchers("/api/users").authenticated()
 @@added
 .requestMatchers("/api/users", "/api/users/").authenticated()
 ```
 
+#### Removed
 ```diff-card
 # // Explicit matcher construction: AntPathRequestMatcher is gone
-@@removed
 .requestMatchers(new AntPathRequestMatcher("/public/**"))
     .permitAll()
 @@added
