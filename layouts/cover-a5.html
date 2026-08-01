@@ -1,0 +1,44 @@
+{# Custom A5 cover — replaces the built-in _book-cover entirely.
+   Keeps the .book-cover class (scaffold page-break) and #book-cover anchor
+   (PagesReport recognises the cover row by it).
+
+   Two shapes, branched on edition identity:
+   - Mini-guides (edition class "mini-guide"): the boots artwork (old
+     spring boot next to a modern runner — the migration in one picture),
+     edition title, and a content strapline from edition.vars.strapline.
+     Image path is relative to the build input dir (the book root), so
+     images/boots.png resolves for pdf builds under every renderer.
+   - Everything else (full guide, plain pt build): the original text cover.
+     edition is null outside publish, so attribute access falls through
+     default() safely.
+
+   cover-logo: an empty, unstyled hook. Themes that want a brand mark on
+   the cover (e.g. herodevs) give it a background-image and dimensions;
+   themes that don't define it get nothing (an empty div has no box). #}
+<section class="book-cover" id="book-cover">
+  <div class="cover-logo" aria-hidden="true"></div>
+{% if edition is not null and edition.classes contains "mini-guide" %}
+  <div class="cover-a5 cover-mini">
+    <div class="cover-series">spring-boot 3.5 → 4.0 · mini guide</div>
+    <img class="cover-boots" src="images/boots.png" alt="An old spring-heeled boot beside a modern running shoe">
+    <h1 class="cover-title">{{ edition.title | default(book.title) }}</h1>
+    {% if edition.vars.strapline %}<div class="cover-strapline">{{ edition.vars.strapline }}</div>{% endif %}
+    <div class="cover-footnote">Every card verified against Spring Boot 3.5.16 and 4.0.7.
+      Real error output, real fixes, from the spring-break test suite. Steve Poole.</div>
+  </div>
+{% else %}
+  <div class="cover-a5">
+    <div class="cover-series">spring-boot 3.5 → 4.0</div>
+    <h1 class="cover-title">{{ edition.title | default(book.title) | default('Spring Break Cheat Sheets') }}</h1>
+    <div class="cover-subtitle">Breaking Changes You Need to Fix</div>
+    <div class="cover-tiers">
+      <span class="cover-tier cover-tier-1">Tier 1 · Won't Build</span>
+      <span class="cover-tier cover-tier-2">Tier 2 · Won't Start</span>
+      <span class="cover-tier cover-tier-3">Tier 3 · Behaves Differently</span>
+    </div>
+    <div class="cover-author">Steve Poole</div>
+    <div class="cover-footnote">Every card verified against Spring Boot 3.5.16 and 4.0.7.
+      Real error output, real fixes, from the spring-break test suite.</div>
+  </div>
+{% endif %}
+</section>

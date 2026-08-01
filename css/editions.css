@@ -1,0 +1,149 @@
+/* =============================================================================
+ * editions.css — per-edition styling keyed off publication identity classes.
+ *
+ * `pt publish` stamps <html> with `edition-{id}` plus each declared class
+ * (see publication: in pagewright.yaml). This file is in the book css:
+ * chain, so it loads for every edition under every theme; the selectors
+ * only fire where the classes match. Plain `pt build` runs carry no
+ * edition classes and are untouched.
+ *
+ * Accent colours match the subsystem axis declaration, so a guide's cover
+ * wears its subsystem's colour.
+ * ===========================================================================*/
+
+/* Every mini-guide: mark the cover as part of the series. */
+html.mini-guide .cover-subtitle::after {
+  content: " · Mini Guide";
+  color: #8a8f98;
+}
+
+html.mini-guide .cover-footnote::before {
+  content: "One cut from the full Spring Break Cheat Sheets. ";
+}
+
+/* ── Mini-guide image cover (cover-a5.html, .cover-mini branch) ──────────
+ * The boots artwork: an old spring-heeled boot beside a modern runner —
+ * the 3.5 → 4.0 migration in one picture. Ink-on-transparent, so it sits
+ * on the white page with no plate. The stack accent colour still comes
+ * from the border-top rules below. */
+.cover-mini {
+  justify-content: flex-start;
+  padding-top: 14mm;
+  text-align: center;
+  align-items: center;
+}
+
+.cover-mini .cover-series { margin-bottom: 6mm; }
+
+.cover-boots {
+  display: block;
+  width: 96mm;              /* 689×544 source ≈ 96×76mm on page, crisp at print */
+  margin: 0 auto 8mm;
+}
+
+.cover-mini .cover-title {
+  font-size: 20pt;
+  margin-bottom: 3mm;
+}
+
+.cover-strapline {
+  font-size: 10.5pt;
+  color: #555;
+  margin-bottom: 10mm;
+}
+
+.cover-mini .cover-footnote {
+  margin: 0 auto;
+  max-width: 104mm;
+}
+
+/* Per-stack cover and back-page accents (subsystem axis colours). */
+html.stack-batch          .cover-a5 { border-top-color: #a61e4d; }
+html.stack-hibernate      .cover-a5 { border-top-color: #b35c00; }
+html.stack-security       .cover-a5 { border-top-color: #862e9c; }
+html.stack-data-messaging .cover-a5 { border-top-color: #1864ab; }
+html.stack-testing        .cover-a5 { border-top-color: #087f5b; }
+html.stack-observability  .cover-a5 { border-top-color: #2b8a3e; }
+html.stack-jackson        .cover-a5 { border-top-color: #5f3dc4; }
+html.stack-web            .cover-a5 { border-top-color: #0b7285; }
+html.stack-core           .cover-a5 { border-top-color: #495057; }
+
+/* The cover's tier legend is redundant noise on a 6-page mini guide when
+   the guide is single-tier heavy; keep it, but tone it down. */
+html.mini-guide .cover-tiers { opacity: 0.85; }
+
+/* ── Mini-guide intro page (_book-front.html, .mg-intro section) ────────── */
+.mg-intro h2 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4pt;
+  margin: 4mm 0 1.5mm;
+}
+
+.mg-legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.mg-legend li {
+  font-size: 7.4pt;
+  line-height: 1.5;
+  padding: 1.2mm 0;
+  border-bottom: 0.5pt solid #f1f3f5;
+}
+.mg-key {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 6.2pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3pt;
+  color: #fff;
+  border-radius: 2px;
+  padding: 1.2pt 5pt;
+  margin-right: 2mm;
+  min-width: 22mm;
+  text-align: center;
+}
+.mg-key-tier   { background: #c0392b; }
+.mg-key-impact { background: #856404; }
+.mg-key-auto   { background: #1a56db; }
+.mg-key-see    { background: #3a4048; }
+.mg-key-fix    { background: #1d7a3d; }
+.mg-key-watch  { background: #e8590c; }
+.mg-key-verify { background: #087f5b; }
+
+.mg-series {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.mg-series li {
+  font-size: 7.4pt;
+  line-height: 1.45;
+  padding: 1.1mm 1.5mm;
+  border-bottom: 0.5pt solid #f1f3f5;
+}
+.mg-series li.mg-current {
+  background: #f6f8fa;
+  border-left: 2.5pt solid #c0392b;
+}
+.mg-series-title { font-weight: 600; }
+.mg-series-strap { color: #8a8f98; margin-left: 2mm; }
+.mg-this {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 5.8pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #c0392b;
+  margin-left: 2mm;
+}
+
+.mg-full {
+  font-size: 7pt;
+  color: #666;
+  margin-top: 3mm;
+  font-family: 'JetBrains Mono', monospace;
+}

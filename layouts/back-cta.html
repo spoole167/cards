@@ -1,0 +1,30 @@
+{# Custom A5 back page — replaces the built-in _book-back entirely.
+   Keeps the .book-back class (scaffold page-break-before) and #book-back
+   anchor (PagesReport recognises the back row by it). Copy mirrors the
+   guide.json footer CTA.
+
+   back-logo: an empty, unstyled hook, same convention as cover-logo in
+   cover-a5.html — themes that want a brand mark here style it, others
+   get nothing. #}
+<section class="book-back" id="book-back">
+  <div class="back-cta">
+    <div class="back-logo" aria-hidden="true"></div>
+    <h1>Not ready to migrate?</h1>
+    <p class="back-lead">Spring Boot 3.5 stops receiving fixes when open-source support ends.
+      You have three sane options. Pick one deliberately.</p>
+    <ol class="back-options">
+      <li><strong>Pin 3.5 and track CVEs.</strong> Free, but the clock is running and
+        every new CVE is your team's problem to triage.</li>
+      <li><strong>Migrate incrementally with OpenRewrite.</strong> The Boot 4.0 recipe
+        automates the renames in this book; the behavioural changes still need eyes.</li>
+      <li><strong>HeroDevs NES for Spring.</strong> Security patches for 3.5 beyond EOL,
+        buying your team time to migrate on your schedule, not the calendar's.</li>
+    </ol>
+    <div class="back-links">
+      <div>Spring Boot 4.0 Migration Guide · github.com/spring-projects/spring-boot/wiki</div>
+      <div>OpenRewrite Boot 4.0 recipe · docs.openrewrite.org/recipes/java/spring/boot4</div>
+      <div>HeroDevs NES for Spring · herodevs.com/support/spring-nes</div>
+      <div>The test suite behind this book · github.com/spoole167/spring-break</div>
+    </div>
+  </div>
+</section>
